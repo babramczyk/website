@@ -1,0 +1,1 @@
+export const File2 = () => 'File 2'
