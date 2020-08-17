@@ -1,1 +1,4 @@
-export const File2 = () => 'File 2'
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
+
+export const File2 = () => "File 2";

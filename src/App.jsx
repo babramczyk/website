@@ -1,29 +1,27 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { ReadMe } from "./pages/README";
-import { File1 } from "./pages/file1";
-import { File2 } from "./pages/file2";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ReadMe } from "./pages/ReadMe";
+import { File1 } from "./pages/File1";
+import { File2 } from "./pages/File2";
+import { Explorer } from "./components/Explorer";
+import { Nav } from "./components/Nav";
 
 function App() {
   return (
     <Router>
-      <div className="content">
-        <div className="nav"></div>
-        <div className="sidebar">
-          <ul className="file-list">
-            <li className="file">
-              <Link to="/">README.md</Link>
-            </li>
-            <li className="file">
-              <Link to="/file1.md">file1.md</Link>
-            </li>
-            <li className="file">
-              <Link to="/file2.md">file2.md</Link>
-            </li>
-          </ul>
-        </div>
-        <main>
+      <div
+        css={{
+          display: "flex",
+          background: "rgb(33, 33, 33)",
+          width: "100vw",
+          height: "100vh",
+        }}
+      >
+        <Nav />
+        <Explorer />
+        <main css={{ background: "white", flex: '1 1 100ch', padding: "4rem" }}>
           <Switch>
             <Route path="/file1.md">
               <File1 />
