@@ -14,7 +14,10 @@ export const ExplorerFile = ({ destRoute, filename }) => {
           alignItems: "center",
           width: "100%",
           paddingLeft: "2rem",
-          paddingRight: '1rem'
+          paddingRight: '1rem',
+          ':hover': {
+            background: '#303334'
+          }
         }}
       >
         <img
