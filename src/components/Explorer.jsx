@@ -1,8 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import { Link } from "react-router-dom";
-
-const linkStyles = { color: "rgb(210, 210, 210)", textDecoration: "none" };
+import { ExplorerFile } from "./ExplorerFile";
 
 export const Explorer = () => {
   return (
@@ -11,25 +9,26 @@ export const Explorer = () => {
         background: "rgb(42, 42, 43)",
         color: "rgb(210, 210, 210)",
         flex: "0 1 16rem",
-        padding: "1rem 2rem",
+        minWidth: 'fit-content',
+        padding: "1rem 0",
       }}
     >
-      <ul className="file-list">
-        <li className="file">
-          <Link to="/" css={linkStyles}>
-            README.md
-          </Link>
-        </li>
-        <li className="file">
-          <Link to="/file1.md" css={linkStyles}>
-            file1.md
-          </Link>
-        </li>
-        <li className="file">
-          <Link to="/file2.md" css={linkStyles}>
-            file2.md
-          </Link>
-        </li>
+      <ul
+        className="file-list"
+        css={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "stretch",
+        }}
+      >
+        <ExplorerFile destRoute="/" filename="README.md" />
+        <ExplorerFile destRoute="/file1.md" filename="file1.md">
+          file1.md
+        </ExplorerFile>
+        <ExplorerFile destRoute="/file2.md" filename="file2.md">
+          file2.md
+        </ExplorerFile>
       </ul>
     </div>
   );

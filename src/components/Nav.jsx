@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 
-const navItemStyles = { cursor: "pointer", paddingBottom: "2rem" };
+const navItemStyles = { cursor: "pointer", marginBottom: "2rem" };
 
 export const Nav = () => {
   return (
