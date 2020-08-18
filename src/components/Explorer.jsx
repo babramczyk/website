@@ -18,6 +18,7 @@ export const Explorer = () => {
           textTransform: "uppercase",
           paddingLeft: "1rem",
           marginBottom: ".5rem",
+          color: "#BBB",
         }}
       >
         Explorer
@@ -28,6 +29,7 @@ export const Explorer = () => {
           fontWeight: "bold",
           paddingLeft: "1rem",
           marginBottom: ".5rem",
+          color: "#CCC",
         }}
       >
         abramczyk.dev

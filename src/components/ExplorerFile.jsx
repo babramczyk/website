@@ -9,7 +9,7 @@ export const ExplorerFile = ({ destRoute, filename }) => {
       <Link
         to={destRoute}
         css={{
-          color: "#d2d2d2",
+          color: "#CCC",
           textDecoration: "none",
           display: "flex",
           alignItems: "center",

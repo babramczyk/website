@@ -7,7 +7,7 @@ export const Tab = ({ title }) => {
     <div
       css={{
         background: "#212121",
-        color: "#d2d2d2",
+        color: "#FFF",
         padding: ".5rem 2rem .5rem 1rem",
         width: "fit-content",
         display: "flex",
