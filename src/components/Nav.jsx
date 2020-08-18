@@ -6,7 +6,7 @@ const navItemStyles = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  height: "3rem",
+  height: "3.5rem",
   filter: "brightness(.7)",
   ":hover": {
     filter: "brightness(1)",
