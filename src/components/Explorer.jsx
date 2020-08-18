@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import { Link } from "react-router-dom";
 
-const linkStyles = { color: "rgb(210, 210, 210)", "text-decoration": "none" };
+const linkStyles = { color: "rgb(210, 210, 210)", textDecoration: "none" };
 
 export const Explorer = () => {
   return (
