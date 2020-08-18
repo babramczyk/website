@@ -23,11 +23,11 @@ export const Explorer = () => {
         }}
       >
         <ExplorerFile destRoute="/" filename="README.md" />
-        <ExplorerFile destRoute="/file1.md" filename="file1.md">
+        <ExplorerFile
+          destRoute="/NorthwesternMutual.md"
+          filename="NorthwesternMutual.md"
+        >
           file1.md
-        </ExplorerFile>
-        <ExplorerFile destRoute="/file2.md" filename="file2.md">
-          file2.md
         </ExplorerFile>
       </ul>
     </div>

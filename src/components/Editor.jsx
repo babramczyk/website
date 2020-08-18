@@ -4,8 +4,9 @@ import { Route, Switch, useLocation } from "react-router-dom";
 import { Tab } from "./Tab";
 import { lazy, Suspense } from "react";
 
-const File1 = lazy(() => import("!babel-loader!mdx-loader!../pages/File1.md"));
-const File2 = lazy(() => import("!babel-loader!mdx-loader!../pages/File2.md"));
+const NorthwesternMutual = lazy(() =>
+  import("!babel-loader!mdx-loader!../pages/NorthwesternMutual.md")
+);
 const ReadMe = lazy(() =>
   import("!babel-loader!mdx-loader!../pages/ReadMe.md")
 );
@@ -18,36 +19,34 @@ export const Editor = () => {
   return (
     <main
       css={{
-        flex: "1 1 100ch",
+        flex: "1",
         display: "flex",
         flexDirection: "column",
         alignItems: "stretch",
+        background: "white",
       }}
     >
       <div css={{ background: "#2a2a2b" }}>
         <Tab title={selectedFilename} />
       </div>
-      <div
-        css={{
-          padding: "2rem",
-          background: "white",
-          flex: "1",
-          overflow: "auto",
-        }}
-      >
-        <Suspense fallback>
-          <Switch>
-            <Route path="/file1.md">
-              <File1 />
-            </Route>
-            <Route path="/file2.md">
-              <File2 />
-            </Route>
-            <Route path="/">
-              <ReadMe />
-            </Route>
-          </Switch>
-        </Suspense>
+      <div css={{ overflow: "auto" }}>
+        <div
+          css={{
+            padding: "2rem",
+            maxWidth: "80ch",
+          }}
+        >
+          <Suspense fallback>
+            <Switch>
+              <Route path="/NorthwesternMutual.md">
+                <NorthwesternMutual />
+              </Route>
+              <Route path="/">
+                <ReadMe />
+              </Route>
+            </Switch>
+          </Suspense>
+        </div>
       </div>
     </main>
   );
