@@ -14,8 +14,7 @@ export const ExplorerFile = ({ destRoute, filename }) => {
           display: "flex",
           alignItems: "center",
           width: "100%",
-          paddingLeft: "2rem",
-          paddingRight: "1rem",
+          padding: '.125rem 1rem .125rem 2rem',
           ":hover": {
             background: "#303334",
           },

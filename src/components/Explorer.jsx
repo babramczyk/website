@@ -11,6 +11,7 @@ export const Explorer = () => {
         flex: "0 1 16rem",
         minWidth: "fit-content",
         padding: "1rem 0",
+        fontSize: '14px'
       }}
     >
       <header
