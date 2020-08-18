@@ -12,6 +12,7 @@ export const Tab = ({ title }) => {
         width: "fit-content",
         display: "flex",
         alignItems: "center",
+        cursor: "pointer",
       }}
     >
       <InfoIcon />
