@@ -6,9 +6,10 @@ const navItemStyles = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  height: "3.5rem",
+  height: "3rem",
+  filter: "brightness(.7)",
   ":hover": {
-    filter: "brightness(100)",
+    filter: "brightness(1)",
   },
 };
 
@@ -17,17 +18,17 @@ export const Nav = () => {
     <div
       css={{
         background: "rgb(58, 58, 58)",
-        flex: "0 0 4rem",
+        flex: "0 0 3rem",
         display: "flex",
         flexDirection: "column",
         alignItems: "stretch",
-        // border: "1px solid red",
       }}
     >
       <div
         css={{
           ...navItemStyles,
-          borderLeft: "1px solid #DDDDDD",
+          borderLeft: "2px solid #FFF",
+          filter: "brightness(1)",
         }}
         role="button"
         title="File explorer"
