@@ -9,7 +9,7 @@ export const Explorer = () => {
         background: "rgb(42, 42, 43)",
         color: "rgb(210, 210, 210)",
         flex: "0 1 16rem",
-        minWidth: 'fit-content',
+        minWidth: "fit-content",
         padding: "1rem 0",
       }}
     >

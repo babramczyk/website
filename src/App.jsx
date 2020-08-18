@@ -6,7 +6,6 @@ import { Nav } from "./components/Nav";
 import { Editor } from "./components/Editor";
 
 function App() {
-
   return (
     <div
       css={{

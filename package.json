@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write --loglevel=error ."
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,6 +35,9 @@
     ]
   },
   "devDependencies": {
-    "mdx-loader": "^3.0.2"
+    "husky": "^4.2.5",
+    "mdx-loader": "^3.0.2",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1"
   }
 }
