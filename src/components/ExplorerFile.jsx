@@ -1,32 +1,27 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { Link } from "react-router-dom";
+import { InfoIcon } from "./InfoIcon";
 
 export const ExplorerFile = ({ destRoute, filename }) => {
   return (
-    <li css={{  }}>
+    <li>
       <Link
         to={destRoute}
         css={{
-          color: "rgb(210, 210, 210)",
+          color: "#d2d2d2",
           textDecoration: "none",
           display: "flex",
           alignItems: "center",
           width: "100%",
           paddingLeft: "2rem",
-          paddingRight: '1rem',
-          ':hover': {
-            background: '#303334'
-          }
+          paddingRight: "1rem",
+          ":hover": {
+            background: "#303334",
+          },
         }}
       >
-        <img
-          src="/icons/info.svg"
-          alt=""
-          width="16"
-          height="16"
-          css={{ marginRight: ".5rem" }}
-        />
+        <InfoIcon />
         <span>{filename}</span>
       </Link>
     </li>
