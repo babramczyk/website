@@ -11,7 +11,7 @@ export const Explorer = () => {
         flex: "0 1 16rem",
         minWidth: "fit-content",
         padding: "1rem 0",
-        fontSize: '14px'
+        fontSize: "14px",
       }}
     >
       <header
@@ -46,11 +46,13 @@ export const Explorer = () => {
       >
         <ExplorerFile destRoute="/" filename="README.md" />
         <ExplorerFile
+          destRoute="/Toolkit.md"
+          filename="Toolkit.md"
+        />
+        <ExplorerFile
           destRoute="/NorthwesternMutual.md"
           filename="NorthwesternMutual.md"
-        >
-          file1.md
-        </ExplorerFile>
+        />
       </ul>
     </div>
   );

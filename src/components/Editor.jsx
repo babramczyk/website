@@ -10,6 +10,9 @@ const NorthwesternMutual = lazy(() =>
 const ReadMe = lazy(() =>
   import("!babel-loader!mdx-loader!../pages/ReadMe.md")
 );
+const Toolkit = lazy(() =>
+  import("!babel-loader!mdx-loader!../pages/Toolkit.md")
+);
 
 export const Editor = () => {
   const location = useLocation();
@@ -40,6 +43,9 @@ export const Editor = () => {
             <Switch>
               <Route path="/NorthwesternMutual.md">
                 <NorthwesternMutual />
+              </Route>
+              <Route path="/Toolkit.md">
+                <Toolkit />
               </Route>
               <Route path="/">
                 <ReadMe />
