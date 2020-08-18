@@ -29,7 +29,7 @@ export const Editor = () => {
       </div>
       <div
         css={{
-          padding: "4rem",
+          padding: "2rem",
           background: "white",
           flex: "1",
           overflow: "auto",
