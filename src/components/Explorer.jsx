@@ -13,6 +13,25 @@ export const Explorer = () => {
         padding: "1rem 0",
       }}
     >
+      <header
+        css={{
+          textTransform: "uppercase",
+          paddingLeft: "1rem",
+          marginBottom: ".5rem",
+        }}
+      >
+        Explorer
+      </header>
+      <div
+        css={{
+          textTransform: "uppercase",
+          fontWeight: "bold",
+          paddingLeft: "1rem",
+          marginBottom: ".5rem",
+        }}
+      >
+        abramczyk.dev
+      </div>
       <ul
         className="file-list"
         css={{

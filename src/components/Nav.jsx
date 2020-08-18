@@ -1,7 +1,16 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 
-const navItemStyles = { cursor: "pointer", marginBottom: "2rem" };
+const navItemStyles = {
+  cursor: "pointer",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "3.5rem",
+  ":hover": {
+    filter: "brightness(100)",
+  },
+};
 
 export const Nav = () => {
   return (
@@ -11,17 +20,20 @@ export const Nav = () => {
         flex: "0 0 4rem",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
-        padding: "1rem",
+        alignItems: "stretch",
+        // border: "1px solid red",
       }}
     >
-      <img
-        src="/icons/files.svg"
-        alt="File explorer"
+      <div
+        css={{
+          ...navItemStyles,
+          borderLeft: "1px solid #DDDDDD",
+        }}
         role="button"
-        css={{ ...navItemStyles }}
         title="File explorer"
-      />
+      >
+        <img src="/icons/files.svg" alt="Explorer" />
+      </div>
       <a
         css={{ ...navItemStyles }}
         href="//linkedin.com/in/brett-abramczyk"
