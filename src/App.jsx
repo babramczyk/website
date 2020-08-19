@@ -4,18 +4,20 @@ import "./App.css";
 import { Explorer } from "./components/Explorer";
 import { Nav } from "./components/Nav";
 import { Editor } from "./components/Editor";
-import { lazy, Suspense } from "react";
+import { createElement, lazy, Suspense } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 
-const NorthwesternMutual = lazy(() =>
-  import("!babel-loader!mdx-loader!./pages/NorthwesternMutual.md")
-);
-const ReadMe = lazy(() =>
-  import("!babel-loader!mdx-loader!./pages/ReadMe.md")
-);
-const Toolkit = lazy(() =>
-  import("!babel-loader!mdx-loader!./pages/Toolkit.md")
-);
+const ReadMe = lazy(() => import("!babel-loader!mdx-loader!./pages/ReadMe.md"));
+
+const FILENAMES = ["NorthwesternMutual.md", "Toolkit.md"];
+const fileComponents = FILENAMES.reduce((dest, filename) => {
+  return {
+    ...dest,
+    [filename]: lazy(() =>
+      import(`!babel-loader!mdx-loader!./pages/${filename}`)
+    ),
+  };
+}, {});
 
 function App() {
   const location = useLocation();
@@ -36,12 +38,11 @@ function App() {
       <Editor tabTitle={selectedFilename}>
         <Suspense fallback>
           <Switch>
-            <Route path="/NorthwesternMutual.md">
-              <NorthwesternMutual />
-            </Route>
-            <Route path="/Toolkit.md">
-              <Toolkit />
-            </Route>
+            {FILENAMES.map((filename) => (
+              <Route path={`/${filename}`} key={filename}>
+                {createElement(fileComponents[filename])}
+              </Route>
+            ))}
             <Route path="/">
               <ReadMe />
             </Route>
