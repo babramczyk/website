@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
+import { ExplorerDirectory } from "./ExplorerDirectory";
 import { ExplorerFile } from "./ExplorerFile";
 
 export const Explorer = () => {
@@ -12,6 +13,7 @@ export const Explorer = () => {
         minWidth: "fit-content",
         padding: "1rem 0",
         fontSize: "14px",
+        userSelect: "none",
       }}
     >
       <header
@@ -45,14 +47,13 @@ export const Explorer = () => {
         }}
       >
         <ExplorerFile destRoute="/" filename="README.md" />
-        <ExplorerFile
-          destRoute="/Toolkit.md"
-          filename="Toolkit.md"
-        />
-        <ExplorerFile
-          destRoute="/NorthwesternMutual.md"
-          filename="NorthwesternMutual.md"
-        />
+        <ExplorerFile destRoute="/Toolkit.md" filename="Toolkit.md" />
+        <ExplorerDirectory dirname="experience">
+          <ExplorerFile
+            destRoute="/NorthwesternMutual.md"
+            filename="NorthwesternMutual.md"
+          />
+        </ExplorerDirectory>
       </ul>
     </div>
   );
