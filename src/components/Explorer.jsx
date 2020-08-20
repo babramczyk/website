@@ -53,6 +53,10 @@ export const Explorer = () => {
             filename="NorthwesternMutual.md"
           />
           <ExplorerFile destRoute="/AkitaBox.md" filename="AkitaBox.md" />
+          <ExplorerFile
+            destRoute="/AncillaPartners.md"
+            filename="AncillaPartners.md"
+          />
         </ExplorerDirectory>
         <ExplorerFile destRoute="/Toolkit.md" filename="Toolkit.md" />
       </ul>
@@ -60,4 +64,9 @@ export const Explorer = () => {
   );
 };
 
-export const FILENAMES = ["NorthwesternMutual.md", "Toolkit.md", "AkitaBox.md"];
+export const FILENAMES = [
+  "NorthwesternMutual.md",
+  "Toolkit.md",
+  "AkitaBox.md",
+  "AncillaPartners.md",
+];

@@ -1,10 +1,10 @@
-# Senior Software Engineer - Northwestern Mutual
+# AkitaBox
 
 _2017 –– 2019_
 
 <br />
 
-AkitaBox was my first job out of school. It was an absolute **dream** job, and had a huge role in shaping who I am as an engineer and teammate.
+AkitaBox was my first job out of school. It was an absolute **dream** job, and had a huge role in shaping who I am as an engineer and teammate. AkitaBox is a SaaS company for facility management -- offering an array of apps that helps facility managers to maintenance technicians keep a building up-to-date without manual spreadsheets or scattered legal pads tracking their data.
 
 It was a startup, and still in the early phases when I joined (~30 employees). But by the time I left after 2 years, that was more like 90 employees. It was super interesting to not only witness the different phases of growth of a startup, but also participate in shaping what they looked like.
 
