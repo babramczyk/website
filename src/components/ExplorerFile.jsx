@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { Link } from "react-router-dom";
-import { InfoIcon } from "./InfoIcon";
+import { Icon } from "./Icon";
 
 export const ExplorerFile = ({ destRoute, filename }) => {
   return (
@@ -14,13 +14,17 @@ export const ExplorerFile = ({ destRoute, filename }) => {
           display: "flex",
           alignItems: "center",
           width: "100%",
-          padding: '.125rem 1rem .125rem 2rem',
+          padding: ".125rem 1rem .125rem 2rem",
           ":hover": {
             background: "#303334",
           },
         }}
       >
-        <InfoIcon />
+        <Icon
+          src={
+            filename === "README.md" ? "/icons/info.svg" : "/icons/markdown.svg"
+          }
+        />
         <span>{filename}</span>
       </Link>
     </li>

@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 
-export const InfoIcon = () => {
+export const Icon = ({ src }) => {
   return (
     <img
-      src="/icons/info.svg"
+      src={src}
       alt=""
       width="16"
       height="16"

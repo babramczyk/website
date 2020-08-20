@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import { InfoIcon } from "./InfoIcon";
+import { Icon } from "./Icon";
 
 export const Tab = ({ title }) => {
   return (
@@ -15,7 +15,9 @@ export const Tab = ({ title }) => {
         cursor: "pointer",
       }}
     >
-      <InfoIcon />
+      <Icon
+        src={title === "README.md" ? "/icons/info.svg" : "/icons/markdown.svg"}
+      />
       <span>{title}</span>
     </div>
   );
