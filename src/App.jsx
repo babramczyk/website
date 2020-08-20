@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import "./App.css";
-import { Explorer } from "./components/Explorer";
+import { Explorer, FILENAMES } from "./components/Explorer";
 import { Nav } from "./components/Nav";
 import { Editor } from "./components/Editor";
 import { createElement, lazy, Suspense } from "react";
@@ -9,7 +9,6 @@ import { Route, Switch, useLocation } from "react-router-dom";
 
 const ReadMe = lazy(() => import("!babel-loader!mdx-loader!./pages/ReadMe.md"));
 
-const FILENAMES = ["NorthwesternMutual.md", "Toolkit.md"];
 const fileComponents = FILENAMES.reduce((dest, filename) => {
   return {
     ...dest,

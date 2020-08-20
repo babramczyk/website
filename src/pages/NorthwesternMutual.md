@@ -1,5 +1,9 @@
 # Senior Software Engineer - Northwestern Mutual
 
+_2019 –– Present_
+
+<br />
+
 At Northwestern Mutual, I've been lucky to be a part of the innovation team. The team's motivations are in the title -- we take and create ideas, innovate and execute on them, and move onto the next one.
 
 This has manifested itself in different ways depending on the project. Sometimes, it's taking an idea in an adjacent market and working on it like it's its own separate startup (see ProQuo below). Other times, it may mean taking an idea someone on our team or elsewhere in the company had to drive up efficiency and automation for NM financial reps.

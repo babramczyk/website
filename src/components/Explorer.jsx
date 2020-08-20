@@ -47,14 +47,17 @@ export const Explorer = () => {
         }}
       >
         <ExplorerFile destRoute="/" filename="README.md" />
-        <ExplorerFile destRoute="/Toolkit.md" filename="Toolkit.md" />
         <ExplorerDirectory dirname="experience">
           <ExplorerFile
             destRoute="/NorthwesternMutual.md"
             filename="NorthwesternMutual.md"
           />
+          <ExplorerFile destRoute="/AkitaBox.md" filename="AkitaBox.md" />
         </ExplorerDirectory>
+        <ExplorerFile destRoute="/Toolkit.md" filename="Toolkit.md" />
       </ul>
     </div>
   );
 };
+
+export const FILENAMES = ["NorthwesternMutual.md", "Toolkit.md", "AkitaBox.md"];
