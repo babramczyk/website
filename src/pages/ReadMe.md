@@ -14,4 +14,4 @@ Developers have a lot of opinons. I think mine reduce to the following:
 
 <br />
 
-Anyways... feel free to browse the files on the left to learn more about me 🙂
+Anyways... the files on the left are a good way to learn about me. They're a little looser and more detailed than what'd you see on a resume. If that's not your jam right now and would rather get a birdseye view of things, take a look at [my resume](/assets/brett-abramczyk.pdf).
