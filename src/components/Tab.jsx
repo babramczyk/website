@@ -13,6 +13,7 @@ export const Tab = ({ title }) => {
         display: "flex",
         alignItems: "center",
         cursor: "pointer",
+        userSelect: "none",
       }}
     >
       <Icon
