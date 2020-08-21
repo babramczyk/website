@@ -59,6 +59,7 @@ export const Explorer = () => {
         </ExplorerDirectory>
         <ExplorerFile destRoute="/" filename="README.md" />
         <ExplorerFile destRoute="/Toolkit.md" filename="Toolkit.md" />
+        <ExplorerFile destRoute="/School.md" filename="School.md" />
       </ul>
     </div>
   );
@@ -69,4 +70,5 @@ export const FILENAMES = [
   "Toolkit.md",
   "AkitaBox.md",
   "AncillaPartners.md",
+  "School.md",
 ];
