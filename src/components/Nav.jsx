@@ -40,7 +40,7 @@ export const Nav = () => {
         href="//linkedin.com/in/brett-abramczyk"
         target="_blank"
         rel="noopener noreferrer"
-        title="LinkedIn page"
+        title="LinkedIn"
       >
         <img src="/icons/linked-in.svg" alt="LinkedIn" />
       </a>
@@ -49,8 +49,21 @@ export const Nav = () => {
         href="//github.com/babramczyk"
         target="_blank"
         rel="noopener noreferrer"
+        title="GitHub"
       >
         <img src="/icons/github.svg" alt="GitHub" />
+      </a>
+      <a
+        css={{ ...navItemStyles }}
+        href="/assets/brett-abramczyk.pdf"
+        target="_blank"
+        title="Resume"
+      >
+        <img
+          src="/icons/file.svg"
+          alt="Resume"
+          css={{ width: "24px", height: "24px" }}
+        />
       </a>
     </div>
   );
