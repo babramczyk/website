@@ -5,7 +5,8 @@ import { Explorer, FILENAMES } from "./components/Explorer";
 import { Nav } from "./components/Nav";
 import { Editor } from "./components/Editor";
 import { createElement, lazy, Suspense } from "react";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
+import { useCurrentFilename } from "./hooks/useCurrentFilename";
 
 const ReadMe = lazy(() => import("!babel-loader!mdx-loader!./pages/ReadMe.md"));
 
@@ -19,9 +20,7 @@ const fileComponents = FILENAMES.reduce((dest, filename) => {
 }, {});
 
 function App() {
-  const location = useLocation();
-  const selectedFilename =
-    location.pathname.split("/").slice(-1)[0] || "README.md";
+  const currentFilename = useCurrentFilename();
 
   return (
     <div
@@ -34,7 +33,7 @@ function App() {
     >
       <Nav />
       <Explorer />
-      <Editor tabTitle={selectedFilename}>
+      <Editor tabTitle={currentFilename}>
         <Suspense fallback>
           <Switch>
             {FILENAMES.map((filename) => (

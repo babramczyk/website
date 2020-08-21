@@ -1,9 +1,14 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { Link } from "react-router-dom";
+import { useCurrentFilename } from "../hooks/useCurrentFilename";
 import { Icon } from "./Icon";
 
 export const ExplorerFile = ({ destRoute, filename }) => {
+  const currentFilename = useCurrentFilename();
+
+  const isCurrentFile = currentFilename === filename;
+
   return (
     <li>
       <Link
@@ -15,6 +20,7 @@ export const ExplorerFile = ({ destRoute, filename }) => {
           alignItems: "center",
           width: "100%",
           padding: ".125rem 1rem .125rem 2rem",
+          background: isCurrentFile ? '#303334': 'initial',
           ":hover": {
             background: "#303334",
           },
