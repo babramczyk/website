@@ -46,6 +46,7 @@ export const Explorer = () => {
           alignItems: "stretch",
         }}
       >
+        <ExplorerFile destRoute="/" filename="README.md" />
         <ExplorerDirectory dirname="Timeline">
           <ExplorerFile destRoute="/School.md" filename="School.md" />
           <ExplorerFile
@@ -58,7 +59,6 @@ export const Explorer = () => {
             filename="NorthwesternMutual.md"
           />
         </ExplorerDirectory>
-        <ExplorerFile destRoute="/" filename="README.md" />
         <ExplorerFile destRoute="/10Factor.md" filename="10Factor.md" />
         <ExplorerFile destRoute="/Toolkit.md" filename="Toolkit.md" />
         <ExplorerFile destRoute="/Skills.md" filename="Skills.md" />
