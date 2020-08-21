@@ -12,6 +12,14 @@ No matter the project, they've always involved starting from square one, taking 
 
 ## Projects
 
+### Plan Execution
+
+Plan Execution was a project to develop, research, and test an app that automates a users financial goals.
+
+A financial rep could help a user come up with concrete, prioritized goals for a client, then hand it off to our system to do the money movement automatically for them each month.
+
+After 6 months of research and development, we successfully got the company to notice the product's viability; the project was handed off to another team for continued development.
+
 ### ProQuo
 
 ProQuo started off as a platform that gave athletes rewards for performing well in public events. These "bounties" gave the users discounts from retailers like Nike and Garmin, in exchange for the user's consented data.
@@ -29,14 +37,6 @@ As the sole engineer on this project, it was my job to build some scripts that c
 Exam Connect is a webapp that helps financial representatives schedule paramedical exams for insurance applicants.
 
 Exam Connect was piloted successfully, and handed off to another team for maintenance. Financial reps now use this daily, providing a much smoother process than the old days of calling back and forth between applicant and exam vendor.
-
-### Plan Execution
-
-Plan Execution was a project to develop, research, and test an app that automates a users financial goals.
-
-A financial rep could help a user come up with concrete, prioritized goals for a client, then hand it off to our system to do the money movement automatically for them each month.
-
-After 6 months of research and development, we successfully got the company to notice the product's viability; the project was handed off to another team for continued development.
 
 ## Other responsibilities
 
