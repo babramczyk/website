@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core";
 import { Explorer, FILENAMES } from "./components/Explorer";
 import { Nav } from "./components/Nav";
 import { Editor } from "./components/Editor";
-import { createElement, Fragment, lazy, Suspense } from "react";
+import { createElement, lazy, Suspense } from "react";
 import { Route, Switch } from "react-router-dom";
 import { useCurrentFilename } from "./hooks/useCurrentFilename";
 import { TitleBar } from "./components/TitleBar";
