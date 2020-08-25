@@ -12,7 +12,7 @@ export function TitleBar({ filename }) {
   return (
     <div
       css={{
-        background: "#333",
+        background: "#3C3C3C",
         color: "#CCC",
         display: "flex",
         position: "relative",

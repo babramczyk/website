@@ -13,7 +13,7 @@ export const Editor = ({ children, tabTitle }) => {
         background: "white",
       }}
     >
-      <div css={{ background: "#2a2a2b" }}>
+      <div css={{ background: "#252526" }}>
         <Tab title={tabTitle} />
       </div>
       <div css={{ overflow: "auto" }}>

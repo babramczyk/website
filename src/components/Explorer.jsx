@@ -7,7 +7,7 @@ export const Explorer = () => {
   return (
     <div
       css={{
-        background: "#2A2A2A",
+        background: "#252526",
         color: "#D2D2D2",
         flex: "0 1 16rem",
         minWidth: "fit-content",

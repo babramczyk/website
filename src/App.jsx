@@ -29,7 +29,7 @@ function App() {
       <div
         css={{
           display: "flex",
-          background: "rgb(33, 33, 33)",
+          background: "#252526",
           width: "100vw",
           height: "100vh",
         }}

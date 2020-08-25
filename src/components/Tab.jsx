@@ -6,7 +6,7 @@ export const Tab = ({ title }) => {
   return (
     <div
       css={{
-        background: "#212121",
+        background: "#1E1E1E",
         color: "#FFF",
         padding: ".5rem 2rem .5rem 1rem",
         width: "fit-content",
