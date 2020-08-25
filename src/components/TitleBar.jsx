@@ -23,9 +23,9 @@ export function TitleBar({ filename }) {
       }}
     >
       <div css={{ position: "absolute", left: "0", display: "flex", paddingLeft: '2px' }}>
-        <span css={{ ...circleStyles, background: "red" }}></span>
-        <span css={{ ...circleStyles, background: "yellow" }}></span>
-        <span css={{ ...circleStyles, background: "green" }}></span>
+        <span css={{ ...circleStyles, background: "#FC4848" }}></span>
+        <span css={{ ...circleStyles, background: "#FEB225" }}></span>
+        <span css={{ ...circleStyles, background: "#2ACA33" }}></span>
       </div>
 
       <span
