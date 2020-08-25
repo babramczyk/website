@@ -1,8 +1,11 @@
 # Web Developer Intern - Ancilla Partners
 
+**Web Developer Intern**
+
 _2016_
 
 <br />
+<hr />
 
 In my last summer between semesters at UW-Madison, I was offered a position as Web Developer Intern at small company called Ancilla Partners. They manage apps and websites for healthcare organizations and their data.
 

@@ -2,7 +2,10 @@
 
 **Bachelor of Arts in Computer Science**
 
-_2014-2017_
+_2014 – 2017_
+
+<br />
+<hr />
 
 When I was in high school and deciding where to go to school, my strategy was pretty simple -- find a school good in Computer Sciences and go there. Madison is a top-10 school in CS and was about an hour from home in Milwaukee, so it was pretty much a no brainer. The vaunted "experience" of being a badger didn't really play into my decision to go there, but it was just about the best "cherry on top" you could ask for.
 

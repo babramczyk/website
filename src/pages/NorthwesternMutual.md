@@ -1,6 +1,8 @@
 # Senior Software Engineer - Northwestern Mutual
 
-_2019 –– Present_
+**Senior Software Engineer**
+
+_2019 – Present_
 
 <br />
 

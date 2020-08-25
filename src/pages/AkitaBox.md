@@ -1,8 +1,11 @@
 # AkitaBox
 
-_2017 –– 2019_
+**Junior Software Engineer** | **Software Engineer** | **Software Engineer Lead**
+
+_2017 – 2019_
 
 <br />
+<hr />
 
 AkitaBox was my first job out of school. It was an absolute **dream** job, and had a huge role in shaping who I am as an engineer and teammate. AkitaBox is a SaaS company for facility management -- offering an array of apps that helps facility managers to maintenance technicians keep a building up-to-date without manual spreadsheets or scattered legal pads tracking their data.
 

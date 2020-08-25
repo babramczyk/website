@@ -1,4 +1,4 @@
-# 👋 Hi! I'm Brett
+# Hi! I'm Brett 👋
 
 I'm a full stack engineer that loves creating software that improves the lives of others 😃
 
