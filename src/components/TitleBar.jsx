@@ -5,7 +5,7 @@ const circleStyles = {
   borderRadius: "50%",
   width: "12px",
   height: "12px",
-  margin: "0 6px",
+  margin: "0 4px",
 };
 
 export function TitleBar({ filename }) {
@@ -22,7 +22,7 @@ export function TitleBar({ filename }) {
         padding: "4px",
       }}
     >
-      <div css={{ position: "absolute", left: "0" }}>
+      <div css={{ position: "absolute", left: "0", display: "flex", paddingLeft: '2px' }}>
         <span css={{ ...circleStyles, background: "red" }}></span>
         <span css={{ ...circleStyles, background: "yellow" }}></span>
         <span css={{ ...circleStyles, background: "green" }}></span>
@@ -31,9 +31,6 @@ export function TitleBar({ filename }) {
       <span
         css={{
           fontSize: ".75rem",
-          // position: "absolute",
-          // left: "50%",
-          // transform: "translate(50%, 0px)",
         }}
       >
         {filename} – abramczyk.dev
