@@ -9,18 +9,18 @@ I'm a full stack engineer that loves creating software that improves the lives o
 Specifically, I tend to use the following principles when building a product:
 
 <p>
-  <span style={{ marginRight: "8px" }}>📦</span>
-  <strong>Code</strong> is the <strong>means</strong>; the <strong>product</strong> is the <strong>end</strong>
+  <span style={{ marginRight: "6px" }}>📦</span>
+  Code is purely the means to the <strong>product's</strong> end
 </p>
 
 <p>
-  <span style={{ marginRight: "8px" }}>🤔</span>
+  <span style={{ marginRight: "6px" }}>🤔</span>
   <strong>Pragmaticism</strong> is fundamental to meeting that end
   <br />
 </p>
 
 <p>
-  <span style={{ marginRight: "8px" }}>📝</span>
+  <span style={{ marginRight: "6px" }}>📝</span>
   <strong>Learning</strong> never stops
 </p>
 
