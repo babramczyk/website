@@ -1,17 +1,35 @@
-# 👋 Hey!
+# 👋 Hi! I'm Brett
 
-My name's Brett [Abramczyk](https://forvo.com/word/abramczyk/). I'm a full stack engineer that loves creating software that improves the lives of others.
+I'm a full stack engineer that loves creating software that improves the lives of others 😃
+
+<br />
+
+## Guiding Principles
+
+Specifically, I tend to use the following principles when building a product:
+
+<p>
+  <span style={{ marginRight: "8px" }}>📦</span>
+  <strong>Code</strong> is the <strong>means</strong>; the <strong>product</strong> is the <strong>end</strong>
+</p>
+
+<p>
+  <span style={{ marginRight: "8px" }}>🤔</span>
+  <strong>Pragmaticism</strong> is fundamental to meeting that end
+  <br />
+</p>
+
+<p>
+  <span style={{ marginRight: "8px" }}>📝</span>
+  <strong>Learning</strong> never stops
+</p>
 
 <br />
 <hr />
 <br />
 
-Developers have a lot of opinons. I think mine reduce to the following:
+Anyways... welcome to my website! 🙂
 
-1. **Code** is the **means**; the **product** is the **end**
-2. **Pragmaticism** is fundamental to meeting that end
-3. Engineers should use **paranoid dev tools**, so they don't have to be
+The files on the left are a good way to learn about me. They're a bit looser and more detailed than what'd you get from a resume.
 
-<br />
-
-Anyways... the files on the left are a good way to learn about me. They're a little looser and more detailed than what'd you see on a resume. If that's not your jam right now and would rather get a birdseye view of things, take a look at <a href="/assets/brett-abramczyk.pdf" target="_blank">my resume</a>.
+If that's not your jam right now and would rather get a birdseye view of my experience, you can take a look at <a href="/assets/brett-abramczyk.pdf" target="_blank">my resume</a> itself.
