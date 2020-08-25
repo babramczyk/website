@@ -50,6 +50,10 @@ fieldset {
   padding: 0;
 }
 
+a:visited:not([class]) {
+  color: rgb(0, 0, 238);
+}
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
