@@ -23,14 +23,23 @@ function App() {
   const currentFilename = useCurrentFilename();
 
   return (
-    <Fragment>
+    <div
+      css={{
+        borderRadius: ".5rem",
+        overflow: "hidden",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "stretch",
+      }}
+    >
       <TitleBar filename={currentFilename} />
       <div
         css={{
           display: "flex",
           background: "#252526",
-          width: "100vw",
-          height: "100vh",
+          flex: "1 0",
+          minHeight: "0",
         }}
       >
         <Nav />
@@ -50,7 +59,7 @@ function App() {
           </Suspense>
         </Editor>
       </div>
-    </Fragment>
+    </div>
   );
 }
 
