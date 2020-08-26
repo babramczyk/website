@@ -13,7 +13,6 @@ export const Explorer = () => {
         minWidth: "fit-content",
         padding: "1rem 0",
         fontSize: "14px",
-        userSelect: "none",
       }}
     >
       <header

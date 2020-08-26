@@ -13,9 +13,15 @@ body {
   height: 100%;
   overflow: hidden;
   /* background: rgb(141, 81, 252); */
-  background: rgb(53,6,135);
-background: radial-gradient(circle, rgba(53,6,135,1) 0%, rgba(115,22,199,1) 62%, rgba(27,139,208,1) 100%);
-  padding: 2rem .5rem;
+  background: rgb(53, 6, 135);
+  background: radial-gradient(
+    circle,
+    rgba(53, 6, 135, 1) 0%,
+    rgba(115, 22, 199, 1) 62%,
+    rgba(27, 139, 208, 1) 100%
+  );
+  user-select: none;
+  padding: 2rem 0.5rem;
 }
 
 #root {
