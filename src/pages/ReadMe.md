@@ -1,6 +1,18 @@
-# Hi! I'm Brett 👋
+<h1 style={{ display: "flex", alignItems: "center" }}>
+  <img
+    src="/headshot.png"
+    style={{
+      width: "6rem",
+      height: "6rem",
+      borderRadius: "50%",
+      display: "inline",
+      marginRight: "1rem",
+    }}
+  />
+  Hi! I'm Brett 👋
+</h1>
 
-I'm a full stack engineer that loves creating software that improves the lives of others 😃
+I'm a full stack engineer that loves creating software that improves the lives of others 🙂
 
 <br />
 
@@ -28,7 +40,7 @@ Specifically, I tend to use the following principles when building a product:
 <hr />
 <br />
 
-Anyways... welcome to my website! 🙂
+Anyways... welcome to my website! 😀
 
 The files on the left are a good way to learn about me. They're a bit looser and more detailed than what'd you get from a resume.
 
