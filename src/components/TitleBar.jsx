@@ -22,7 +22,14 @@ export function TitleBar({ filename }) {
         padding: "4px",
       }}
     >
-      <div css={{ position: "absolute", left: "0", display: "flex", paddingLeft: '2px' }}>
+      <div
+        css={{
+          position: "absolute",
+          left: "0",
+          display: "flex",
+          paddingLeft: "2px",
+        }}
+      >
         <span css={{ ...circleStyles, background: "#FC4848" }}></span>
         <span css={{ ...circleStyles, background: "#FEB225" }}></span>
         <span css={{ ...circleStyles, background: "#2ACA33" }}></span>

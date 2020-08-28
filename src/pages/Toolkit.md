@@ -1,8 +1,9 @@
-# My Software Toolkit
+import { PageHeader } from "../components/PageHeader"
 
-Here's are some tools I like to use and consider myself strong in when it comes to building software.
-
-> Disclaimer: Like any decision in software, I don't think any of these tools are one-size-fits-all. But, when they _are_ right for the task at hand, I like reaching for them when I can.
+<PageHeader title="My Software Toolkit">
+  <p>Here's are some tools I like to use and consider myself strong in when it comes to building software.</p>
+  <blockquote>Disclaimer: Like any decision in software, I don't think any of these tools are one-size-fits-all. But, when they <em>are</em> right for the task at hand, I like reaching for them when I can.</blockquote>
+</PageHeader>
 
 ### TypeScript
 

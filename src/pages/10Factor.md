@@ -1,6 +1,6 @@
-# The 10-Factor Engineer
+import { PageHeader } from "../components/PageHeader"
 
-_This section represents 10 factors that I think are the most important to being a good software engineer and teammate. Inspired by https://12factor.net/._
+<PageHeader title="The Ten-Factor Engineer"><p><em>This section represents 10 factors that I think are the most important to being a good software engineer and teammate. Inspired by <a href="//12factor.net">The Twelve-Factor App</a>.</em></p></PageHeader>
 
 ## I. Product-oriented
 

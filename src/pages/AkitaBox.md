@@ -1,11 +1,6 @@
-# AkitaBox
+import { PageHeader } from "../components/PageHeader"
 
-**Junior Software Engineer** | **Software Engineer** | **Software Engineer Lead**
-
-_2017 – 2019_
-
-<br />
-<hr />
+<PageHeader title="AkitaBox" startDate="2017" endDate="2019" positions={["Junior Software Engineer", "Software Engineer", "Software Engineer Team Lead"]} />
 
 AkitaBox was my first job out of school. It was an absolute **dream** job, and had a huge role in shaping who I am as an engineer and teammate. AkitaBox is a SaaS company for facility management -- offering an array of apps that helps facility managers to maintenance technicians keep a building up-to-date without manual spreadsheets or scattered legal pads tracking their data.
 
@@ -15,11 +10,11 @@ It was a startup, and still in the early phases when I joined (~30 employees). B
 <hr />
 <br />
 
-I'm proud of my personal growth there. I started off as a Junior SE that was willing to just work like crazy and stay until 2am for deployments and hotfixes.
+This job was huge for my personal growth, and I'm incredibly grateful for the opportunities I received. Here's a summary:
 
 #### Removing the "Junior"
 
-After 6 months or so, I was promoted to SE and earned the opportunity to have a voice in more impactful conversations (participation in design review, technical direction, customer relationships).
+I started off as a Junior SE that was willing to just work like crazy and stay until 2am for deployments and hotfixes. After 6 months or so, I was promoted to SE and earned the opportunity to have a voice in more impactful conversations (participation in design review, technical direction, customer relationships).
 
 #### Up to team lead
 

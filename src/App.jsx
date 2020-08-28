@@ -31,8 +31,8 @@ function App() {
         display: "flex",
         flexDirection: "column",
         alignItems: "stretch",
-        maxWidth: '1440px',
-        margin: '0 auto'
+        maxWidth: "1440px",
+        margin: "0 auto",
       }}
     >
       <TitleBar filename={currentFilename} />

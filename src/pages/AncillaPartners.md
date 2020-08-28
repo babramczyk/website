@@ -1,11 +1,6 @@
-# Web Developer Intern - Ancilla Partners
+import { PageHeader } from "../components/PageHeader"
 
-**Web Developer Intern**
-
-_2016_
-
-<br />
-<hr />
+<PageHeader title="Ancilla Partners" startDate="2016" endDate="2016" positions={["Web Developer Intern"]} />
 
 In my last summer between semesters at UW-Madison, I was offered a position as Web Developer Intern at small company called Ancilla Partners. They manage apps and websites for healthcare organizations and their data.
 

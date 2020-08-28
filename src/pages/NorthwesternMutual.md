@@ -1,10 +1,6 @@
-# Senior Software Engineer - Northwestern Mutual
+import { PageHeader } from "../components/PageHeader"
 
-**Senior Software Engineer**
-
-_2019 – Present_
-
-<br />
+<PageHeader title="Northwestern Mutual" startDate="2019" endDate="Present" positions={["Senior Software Engineer"]} />
 
 At Northwestern Mutual, I've been lucky to be a part of the innovation team. The team's motivations are in the title -- we take and create ideas, innovate and execute on them, and move onto the next one.
 

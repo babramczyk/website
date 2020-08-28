@@ -1,4 +1,6 @@
-# Skills
+import { PageHeader } from "../components/PageHeader"
+
+<PageHeader title="Skills" />
 
 Here's a basic summary of the tech I've worked with, organized by my current level of expertise with them.
 
