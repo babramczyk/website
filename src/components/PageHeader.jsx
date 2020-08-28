@@ -9,7 +9,7 @@ export const PageHeader = ({
   startDate,
   endDate,
   imageSrc,
-  children
+  children,
 }) => {
   let dateRange;
   if (startDate || endDate) {
