@@ -40,3 +40,9 @@ blockquote {
   padding: 0 1rem;
   color: #6a737d;
 }
+
+@media (max-width: 768px) {
+  .readme-title {
+    flex-direction: column;
+  }
+}

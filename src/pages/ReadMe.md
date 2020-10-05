@@ -1,4 +1,4 @@
-<h1 style={{ display: "flex", alignItems: "center" }}>
+<h1 style={{ display: "flex", alignItems: "center" }} className="readme-title">
   <img
     src="/headshot.png"
     style={{
