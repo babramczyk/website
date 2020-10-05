@@ -59,7 +59,15 @@ function App() {
           }}
           navItemActive={explorerVisible}
         />
-        {explorerVisible && <Explorer />}
+        {explorerVisible && (
+          <Explorer
+            onFileSelect={() => {
+              if (isMobile) {
+                setExplorerVisible(false);
+              }
+            }}
+          />
+        )}
         <Editor tabTitle={currentFilename}>
           <Suspense fallback>
             <Switch>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useCurrentFilename } from "../hooks/useCurrentFilename";
 import { Icon } from "./Icon";
 
-export const ExplorerFile = ({ destRoute, filename }) => {
+export const ExplorerFile = ({ destRoute, filename, onSelect }) => {
   const currentFilename = useCurrentFilename();
 
   const isCurrentFile = currentFilename === filename;
@@ -25,6 +25,7 @@ export const ExplorerFile = ({ destRoute, filename }) => {
             background: "#303334",
           },
         }}
+        onClick={onSelect}
       >
         <Icon
           src={

@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core";
 import { ExplorerDirectory } from "./ExplorerDirectory";
 import { ExplorerFile } from "./ExplorerFile";
 
-export const Explorer = () => {
+export const Explorer = ({ onFileSelect }) => {
   return (
     <div
       css={{
@@ -45,22 +45,48 @@ export const Explorer = () => {
           alignItems: "stretch",
         }}
       >
-        <ExplorerFile destRoute="/" filename="README.md" />
+        <ExplorerFile
+          destRoute="/"
+          filename="README.md"
+          onSelect={onFileSelect}
+        />
         <ExplorerDirectory dirname="Timeline">
-          <ExplorerFile destRoute="/School.md" filename="School.md" />
+          <ExplorerFile
+            destRoute="/School.md"
+            filename="School.md"
+            onSelect={onFileSelect}
+          />
           <ExplorerFile
             destRoute="/AncillaPartners.md"
             filename="AncillaPartners.md"
+            onSelect={onFileSelect}
           />
-          <ExplorerFile destRoute="/AkitaBox.md" filename="AkitaBox.md" />
+          <ExplorerFile
+            destRoute="/AkitaBox.md"
+            filename="AkitaBox.md"
+            onSelect={onFileSelect}
+          />
           <ExplorerFile
             destRoute="/NorthwesternMutual.md"
             filename="NorthwesternMutual.md"
+            onSelect={onFileSelect}
           />
         </ExplorerDirectory>
-        <ExplorerFile destRoute="/10Factor.md" filename="10Factor.md" />
-        <ExplorerFile destRoute="/Toolkit.md" filename="Toolkit.md" />
-        <ExplorerFile destRoute="/Skills.md" filename="Skills.md" />
+        <ExplorerFile
+          destRoute="/10Factor.md"
+          filename="10Factor.md"
+          onSelect={onFileSelect}
+        />
+        <ExplorerFile
+          destRoute="/Toolkit.md"
+          filename="Toolkit.md"
+          onSelect={onFileSelect}
+        />
+        <ExplorerFile
+          destRoute="/Skills.md"
+          filename="Skills.md"
+          onSelect={onFileSelect}
+        />
       </ul>
     </div>
   );
