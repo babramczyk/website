@@ -21,7 +21,7 @@ export const Editor = ({ children, tabTitle }) => {
           css={{
             padding: "2rem",
             maxWidth: "80ch",
-            userSelect: "initial",
+            userSelect: "text",
           }}
         >
           {children}
