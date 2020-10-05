@@ -3,10 +3,11 @@ import { jsx } from "@emotion/core";
 import { Explorer, FILENAMES } from "./components/Explorer";
 import { Nav } from "./components/Nav";
 import { Editor } from "./components/Editor";
-import { createElement, lazy, Suspense } from "react";
+import { createElement, lazy, Suspense, useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import { useCurrentFilename } from "./hooks/useCurrentFilename";
 import { TitleBar } from "./components/TitleBar";
+import { useMediaQuery } from "@react-hook/media-query";
 
 const ReadMe = lazy(() => import("!babel-loader!mdx-loader!./pages/ReadMe.md"));
 
@@ -21,6 +22,14 @@ const fileComponents = FILENAMES.reduce((dest, filename) => {
 
 function App() {
   const currentFilename = useCurrentFilename();
+  const [explorerVisible, setExplorerVisible] = useState(true);
+
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  useEffect(() => {
+    if (isMobile) {
+      setExplorerVisible(false);
+    }
+  }, [isMobile]);
 
   return (
     <div
@@ -44,8 +53,13 @@ function App() {
           minHeight: "0",
         }}
       >
-        <Nav />
-        <Explorer />
+        <Nav
+          onNavItemClick={() => {
+            setExplorerVisible((vis) => !vis);
+          }}
+          navItemActive={explorerVisible}
+        />
+        {explorerVisible && <Explorer />}
         <Editor tabTitle={currentFilename}>
           <Suspense fallback>
             <Switch>

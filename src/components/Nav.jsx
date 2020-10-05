@@ -13,7 +13,12 @@ const navItemStyles = {
   },
 };
 
-export const Nav = () => {
+const activeNavItemStyles = {
+  borderLeft: "2px solid #FFF",
+  filter: "brightness(1)",
+};
+
+export const Nav = ({ onNavItemClick, navItemActive }) => {
   return (
     <div
       css={{
@@ -27,11 +32,11 @@ export const Nav = () => {
       <div
         css={{
           ...navItemStyles,
-          borderLeft: "2px solid #FFF",
-          filter: "brightness(1)",
+          ...(navItemActive && activeNavItemStyles),
         }}
         role="button"
         title="File explorer"
+        onClick={onNavItemClick}
       >
         <img src="/icons/files.svg" alt="Explorer" />
       </div>
