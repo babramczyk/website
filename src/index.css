@@ -46,3 +46,10 @@ blockquote {
     flex-direction: column;
   }
 }
+
+@media (max-width: 640px) {
+  body {
+    /* Mobile browers are going to have their bottom nav hide the bottom of the screen. Plus, since we aren't scrolling the <body> at all, it's never going to go away. So we have to bump the content up to make it peek out from the browser's nav */
+    padding-bottom: 9rem;
+  }
+}
