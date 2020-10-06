@@ -31,42 +31,51 @@ export const PageHeader = ({
 
   return (
     <Fragment>
-      <h1
+      <header
         css={{
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
-          "@media (max-width: 768px)": {
-            flexDirection: "column",
-          },
+          textAlign: "center",
         }}
       >
-        {imgSrc && (
-          <img
-            src={imgSrc}
-            css={{
-              maxWidth: "6rem",
-              maxHeight: "6rem",
-              borderRadius: "200%",
-              display: "inline",
-              marginRight: "1rem",
-            }}
-            alt={imgAlt || ""}
-          />
+        <h1
+          css={{
+            display: "flex",
+            alignItems: "center",
+            "@media (max-width: 768px)": {
+              flexDirection: "column",
+            },
+          }}
+        >
+          {imgSrc && (
+            <img
+              src={imgSrc}
+              css={{
+                maxWidth: "6rem",
+                maxHeight: "6rem",
+                borderRadius: "200%",
+                display: "inline",
+                marginRight: "1rem",
+              }}
+              alt={imgAlt || ""}
+            />
+          )}
+          {title}
+        </h1>
+        {secondary && (
+          <p>
+            <strong>{secondary}</strong>
+          </p>
         )}
-        {title}
-      </h1>
-      {secondary && (
-        <p>
-          <strong>{secondary}</strong>
-        </p>
-      )}
-      {positionsDisplay}
-      {dateRange && (
-        <p>
-          <em>{dateRange}</em>
-        </p>
-      )}
-      {children}
+        {positionsDisplay}
+        {dateRange && (
+          <p>
+            <em>{dateRange}</em>
+          </p>
+        )}
+        {children}
+      </header>
 
       <br />
       {!hideDivider && <hr />}
