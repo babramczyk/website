@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { useState } from "react";
+import { Icon } from "./Icon";
 
 const chevronStyles = {
   top: "2px",
@@ -17,42 +18,14 @@ export const ExplorerDirectory = ({ children, dirname }) => {
         onClick={() => setIsOpen((isOpen) => !isOpen)}
         css={{ width: "100%", cursor: "pointer" }}
       >
-        <span css={{ marginRight: "4px" }}>
-          <img
-            src="/icons/chevron-right.svg"
-            alt=""
-            css={{
-              ...chevronStyles,
-              display: isOpen ? "none" : "inline-block",
-            }}
-          />
-          <img
-            src="/icons/chevron-down.svg"
-            alt=""
-            css={{
-              ...chevronStyles,
-              display: isOpen ? "inline-block" : "none",
-            }}
-          />
-        </span>
-        <span css={{ marginRight: ".5rem" }}>
-          <img
-            src="/icons/folder.svg"
-            alt=""
-            css={{
-              ...chevronStyles,
-              display: isOpen ? "none" : "inline-block",
-            }}
-          />
-          <img
-            src="/icons/folder-opened.svg"
-            alt=""
-            css={{
-              ...chevronStyles,
-              display: isOpen ? "inline-block" : "none",
-            }}
-          />
-        </span>
+        <Icon
+          src={isOpen ? "/icons/chevron-down.svg" : "/icons/chevron-right.svg"}
+          css={{ ...chevronStyles, marginRight: "4px" }}
+        />
+        <Icon
+          src={isOpen ? "/icons/folder-opened.svg" : "/icons/folder.svg"}
+          css={chevronStyles}
+        />
         <span>{dirname}</span>
       </div>
       {isOpen ? children : null}
