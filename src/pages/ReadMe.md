@@ -1,16 +1,6 @@
-<h1 style={{ display: "flex", alignItems: "center" }} className="readme-title">
-  <img
-    src="/headshot-192.png"
-    style={{
-      width: "6rem",
-      height: "6rem",
-      borderRadius: "50%",
-      display: "inline",
-      marginRight: "1rem",
-    }}
-  />
-  Hi! I'm Brett 👋
-</h1>
+import { PageHeader } from "../components/PageHeader"
+
+<PageHeader title="Hi! I'm Brett 👋" imgSrc="/headshot-192.png" hideDivider />
 
 I'm a full stack engineer that loves creating software that improves the lives of others 🙂
 

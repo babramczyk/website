@@ -8,7 +8,9 @@ export const PageHeader = ({
   positions,
   startDate,
   endDate,
-  imageSrc,
+  imgSrc,
+  imgAlt,
+  hideDivider,
   children,
 }) => {
   let dateRange;
@@ -29,7 +31,30 @@ export const PageHeader = ({
 
   return (
     <Fragment>
-      <h1>{title}</h1>
+      <h1
+        css={{
+          display: "flex",
+          alignItems: "center",
+          "@media (max-width: 768px)": {
+            flexDirection: "column",
+          },
+        }}
+      >
+        {imgSrc && (
+          <img
+            src={imgSrc}
+            css={{
+              width: "6rem",
+              height: "6rem",
+              borderRadius: "50%",
+              display: "inline",
+              marginRight: "1rem",
+            }}
+            alt={imgAlt || ""}
+          />
+        )}
+        {title}
+      </h1>
       {secondary && (
         <p>
           <strong>{secondary}</strong>
@@ -42,8 +67,9 @@ export const PageHeader = ({
         </p>
       )}
       {children}
+
       <br />
-      <hr />
+      {!hideDivider && <hr />}
     </Fragment>
   );
 };
