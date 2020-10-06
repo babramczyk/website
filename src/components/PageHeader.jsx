@@ -44,9 +44,9 @@ export const PageHeader = ({
           <img
             src={imgSrc}
             css={{
-              width: "6rem",
-              height: "6rem",
-              borderRadius: "50%",
+              maxWidth: "6rem",
+              maxHeight: "6rem",
+              borderRadius: "200%",
               display: "inline",
               marginRight: "1rem",
             }}
