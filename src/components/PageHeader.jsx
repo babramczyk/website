@@ -11,6 +11,7 @@ export const PageHeader = ({
   imgSrc,
   imgAlt,
   hideDivider,
+  squareImg,
   children,
 }) => {
   let dateRange;
@@ -54,7 +55,9 @@ export const PageHeader = ({
               css={{
                 maxWidth: "6rem",
                 maxHeight: "6rem",
-                borderRadius: "200%",
+                ...(!squareImg && {
+                  borderRadius: "200%",
+                }),
                 display: "inline",
                 marginRight: "1rem",
               }}

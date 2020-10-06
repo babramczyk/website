@@ -1,6 +1,6 @@
 import { PageHeader } from "../components/PageHeader"
 
-<PageHeader title="Ancilla Partners" startDate="2016" endDate="2016" positions={["Web Developer Intern"]} />
+<PageHeader title="Ancilla Partners" startDate="2016" endDate="2016" positions={["Web Developer Intern"]} imgSrc="/assets/ancilla-partners.png" squareImg />
 
 In my last summer between semesters at UW-Madison, I was offered a position as Web Developer Intern at small company called Ancilla Partners. They manage apps and websites for healthcare organizations and their data.
 
