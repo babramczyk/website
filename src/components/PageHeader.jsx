@@ -54,19 +54,26 @@ export const PageHeader = ({
           }}
         >
           {imgSrc && (
-            <img
-              src={imgSrc}
+            <div
               css={{
-                maxWidth: "6rem",
-                maxHeight: "6rem",
-                ...(!squareImg && {
-                  borderRadius: "200%",
-                }),
-                display: "inline",
+                height: "6rem",
+                width: "6rem",
                 marginRight: "1rem",
+                display: "inline-flex",
+                alignItems: "center",
               }}
-              alt={imgAlt || ""}
-            />
+            >
+              <img
+                src={imgSrc}
+                css={{
+                  objectFit: "cover",
+                  ...(!squareImg && {
+                    borderRadius: "200%",
+                  }),
+                }}
+                alt={imgAlt || ""}
+              />
+            </div>
           )}
           {title}
         </h1>
