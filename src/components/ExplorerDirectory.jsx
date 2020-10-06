@@ -9,7 +9,7 @@ const chevronStyles = {
 };
 
 export const ExplorerDirectory = ({ children, dirname }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div css={{ paddingLeft: ".75rem" }}>
