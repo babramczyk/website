@@ -16,7 +16,13 @@ export const ExplorerDirectory = ({ children, dirname }) => {
       <div
         role="button"
         onClick={() => setIsOpen((isOpen) => !isOpen)}
-        css={{ width: "100%", cursor: "pointer" }}
+        css={{
+          width: "100%",
+          cursor: "pointer",
+          ":hover": {
+            background: "#303334",
+          },
+        }}
       >
         <Icon
           src={isOpen ? "/icons/chevron-down.svg" : "/icons/chevron-right.svg"}
