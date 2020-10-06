@@ -1,6 +1,6 @@
 <h1 style={{ display: "flex", alignItems: "center" }} className="readme-title">
   <img
-    src="/headshot.png"
+    src="/headshot-192.png"
     style={{
       width: "6rem",
       height: "6rem",
