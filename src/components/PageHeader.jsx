@@ -22,12 +22,16 @@ export const PageHeader = ({
 
   let positionsDisplay;
   if (positions && positions.length) {
-    positionsDisplay = positions.map((position, index) => (
+    positionsDisplay = (
       <span>
-        <strong>{position}</strong>
-        {index !== positions.length - 1 ? " | " : null}
+        {positions.map((position, index) => (
+          <Fragment>
+            <strong>{position}</strong>
+            {index !== positions.length - 1 ? " | " : null}
+          </Fragment>
+        ))}
       </span>
-    ));
+    );
   }
 
   return (
