@@ -3,7 +3,13 @@ import { jsx } from "@emotion/core";
 import { Link } from "gatsby";
 import { Icon } from "./Icon";
 
-export const ExplorerFile = ({ destRoute, filename, onSelect, isActive }) => {
+export const ExplorerFile = ({
+  destRoute,
+  filename,
+  onSelect,
+  isActive,
+  iconSrc = "/icons/markdown.svg",
+}) => {
   return (
     <li>
       <Link
@@ -22,11 +28,7 @@ export const ExplorerFile = ({ destRoute, filename, onSelect, isActive }) => {
         }}
         onClick={onSelect}
       >
-        <Icon
-          src={
-            filename === "README.md" ? "/icons/info.svg" : "/icons/markdown.svg"
-          }
-        />
+        <Icon src={iconSrc} />
         <span>{filename}</span>
       </Link>
     </li>

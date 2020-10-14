@@ -3,18 +3,24 @@ import { jsx } from "@emotion/core";
 
 export const Icon = ({ src, className }) => {
   return (
-    <img
+    <div
       css={{
         width: "1rem",
         height: "1rem",
         marginRight: ".5rem",
-        display: "inline-block",
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
-      className={className}
-      src={require(`../assets${src}`)}
-      alt=""
-      width="16"
-      height="16"
-    />
+    >
+      <img
+        css={{
+          objectFit: "cover",
+        }}
+        className={className}
+        src={require(`../assets${src}`)}
+        alt=""
+      />
+    </div>
   );
 };

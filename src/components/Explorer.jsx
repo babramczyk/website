@@ -50,6 +50,7 @@ export const Explorer = ({ onFileSelect, activeFile }) => {
           filename="README.md"
           onSelect={onFileSelect}
           isActive={activeFile === "README.md"}
+          iconSrc="/icons/info.svg"
         />
         <ExplorerDirectory dirname="Timeline">
           <ExplorerFile
@@ -57,6 +58,7 @@ export const Explorer = ({ onFileSelect, activeFile }) => {
             filename="School.md"
             onSelect={onFileSelect}
             isActive={activeFile === "School.md"}
+            iconSrc="/uw-madison.png"
           />
           <ExplorerFile
             destRoute="/AncillaPartners"
