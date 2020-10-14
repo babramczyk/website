@@ -65,7 +65,7 @@ export const Explorer = ({ onFileSelect, activeFile }) => {
             filename="AncillaPartners.md"
             onSelect={onFileSelect}
             isActive={activeFile === "AncillaPartners.md"}
-            iconSrc="/ancilla-partners.png"
+            iconSrc="/ancilla-partners__inverted-transparent.png"
           />
           <ExplorerFile
             destRoute="/AkitaBox"
