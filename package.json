@@ -1,49 +1,43 @@
 {
-  "name": "abramczyk.dev",
-  "version": "0.1.0",
+  "name": "gatsby-starter-hello-world",
   "private": true,
+  "description": "A simplified bare-bones starter for Gatsby",
+  "version": "0.1.0",
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "lint": "eslint .",
+    "format": "prettier --write --loglevel=error .",
+    "start": "yarn develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
   "dependencies": {
-    "@emotion/core": "^10.0.34",
+    "@emotion/core": "^10.0.35",
+    "@mdx-js/mdx": "^1.6.18",
+    "@mdx-js/react": "^1.6.18",
     "@react-hook/media-query": "^1.1.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
+    "gatsby": "^2.24.77",
+    "gatsby-plugin-emotion": "^4.3.13",
+    "gatsby-plugin-mdx": "^1.2.46",
+    "gatsby-plugin-react-helmet": "^3.3.14",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "format": "prettier --write --loglevel=error ."
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "husky": "^4.2.5",
-    "mdx-loader": "^3.0.2",
-    "prettier": "^2.0.5",
-    "pretty-quick": "^2.0.1"
+    "eslint": "^7.11.0",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "prettier": "2.1.2"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

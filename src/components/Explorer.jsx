@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core";
 import { ExplorerDirectory } from "./ExplorerDirectory";
 import { ExplorerFile } from "./ExplorerFile";
 
-export const Explorer = ({ onFileSelect }) => {
+export const Explorer = ({ onFileSelect, activeFile }) => {
   return (
     <div
       css={{
@@ -49,43 +49,51 @@ export const Explorer = ({ onFileSelect }) => {
           destRoute="/"
           filename="README.md"
           onSelect={onFileSelect}
+          isActive={activeFile === "README.md"}
         />
         <ExplorerDirectory dirname="Timeline">
           <ExplorerFile
-            destRoute="/School.md"
+            destRoute="/School"
             filename="School.md"
             onSelect={onFileSelect}
+            isActive={activeFile === "School.md"}
           />
           <ExplorerFile
-            destRoute="/AncillaPartners.md"
+            destRoute="/AncillaPartners"
             filename="AncillaPartners.md"
             onSelect={onFileSelect}
+            isActive={activeFile === "AncillaPartners.md"}
           />
           <ExplorerFile
-            destRoute="/AkitaBox.md"
+            destRoute="/AkitaBox"
             filename="AkitaBox.md"
             onSelect={onFileSelect}
+            isActive={activeFile === "AkitaBox.md"}
           />
           <ExplorerFile
-            destRoute="/NorthwesternMutual.md"
+            destRoute="/NorthwesternMutual"
             filename="NorthwesternMutual.md"
             onSelect={onFileSelect}
+            isActive={activeFile === "NorthwesternMutual.md"}
           />
         </ExplorerDirectory>
         <ExplorerFile
-          destRoute="/10Factor.md"
+          destRoute="/10Factor"
           filename="10Factor.md"
           onSelect={onFileSelect}
+          isActive={activeFile === "10Factor.md"}
         />
         <ExplorerFile
-          destRoute="/Toolkit.md"
+          destRoute="/Toolkit"
           filename="Toolkit.md"
           onSelect={onFileSelect}
+          isActive={activeFile === "Toolkit.md"}
         />
         <ExplorerFile
-          destRoute="/Skills.md"
+          destRoute="/Skills"
           filename="Skills.md"
           onSelect={onFileSelect}
+          isActive={activeFile === "Skills.md"}
         />
       </ul>
     </div>

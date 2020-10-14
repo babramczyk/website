@@ -24,9 +24,13 @@ body {
   padding: 2rem 0.5rem;
 }
 
-#root {
+#___gatsby {
   height: 100%;
   max-height: 2000px;
+}
+
+#gatsby-focus-wrapper {
+  height: 100%;
 }
 
 code {

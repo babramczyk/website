@@ -1,27 +1,16 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import { Explorer, FILENAMES } from "./components/Explorer";
-import { Nav } from "./components/Nav";
-import { Editor } from "./components/Editor";
-import { createElement, lazy, Suspense, useEffect, useState } from "react";
-import { Route, Switch } from "react-router-dom";
-import { useCurrentFilename } from "./hooks/useCurrentFilename";
-import { TitleBar } from "./components/TitleBar";
+import { Explorer } from "./Explorer";
+import { Nav } from "./Nav";
+import { Editor } from "./Editor";
+import { useEffect, useState } from "react";
+import { TitleBar } from "./TitleBar";
 import { useMediaQuery } from "@react-hook/media-query";
+import { Helmet } from "react-helmet";
 
-const ReadMe = lazy(() => import("!babel-loader!mdx-loader!./pages/ReadMe.md"));
+export default function Layout({ children, location }) {
+  const currentFilename = `${location.pathname.split("/")[1] || "README"}.md`;
 
-const fileComponents = FILENAMES.reduce((dest, filename) => {
-  return {
-    ...dest,
-    [filename]: lazy(() =>
-      import(`!babel-loader!mdx-loader!./pages/${filename}`)
-    ),
-  };
-}, {});
-
-function App() {
-  const currentFilename = useCurrentFilename();
   const [explorerVisible, setExplorerVisible] = useState(true);
 
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -44,6 +33,13 @@ function App() {
         margin: "0 auto",
       }}
     >
+      <Helmet>
+        <title>abramczyk.dev</title>
+        <meta
+          name="description"
+          content="👋 I'm Brett Abramczyk. Come and learn more about me and what I do as a software engineer!"
+        />
+      </Helmet>
       <TitleBar filename={currentFilename} />
       <div
         css={{
@@ -66,25 +62,11 @@ function App() {
                 setExplorerVisible(false);
               }
             }}
+            activeFile={currentFilename}
           />
         )}
-        <Editor tabTitle={currentFilename}>
-          <Suspense fallback>
-            <Switch>
-              {FILENAMES.map((filename) => (
-                <Route path={`/${filename}`} key={filename}>
-                  {createElement(fileComponents[filename])}
-                </Route>
-              ))}
-              <Route path="/">
-                <ReadMe />
-              </Route>
-            </Switch>
-          </Suspense>
-        </Editor>
+        <Editor tabTitle={currentFilename}>{children}</Editor>
       </div>
     </div>
   );
 }
-
-export default App;

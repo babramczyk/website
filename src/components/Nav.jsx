@@ -60,7 +60,7 @@ export const Nav = ({ onNavItemClick, navItemActive }) => {
       </a>
       <a
         css={{ ...navItemStyles }}
-        href="/assets/brett-abramczyk.pdf"
+        href="/brett-abramczyk.pdf"
         target="_blank"
         title="Resume"
       >

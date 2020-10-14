@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation } from "@reach/router";
 
 export function useCurrentFilename() {
   const location = useLocation();
