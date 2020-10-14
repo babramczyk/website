@@ -72,7 +72,7 @@ export const Explorer = ({ onFileSelect, activeFile }) => {
             filename="AkitaBox.md"
             onSelect={onFileSelect}
             isActive={activeFile === "AkitaBox.md"}
-            iconSrc="/akitabox.jpeg"
+            iconSrc="/akitabox.png"
           />
           <ExplorerFile
             destRoute="/NorthwesternMutual"
