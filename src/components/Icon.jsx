@@ -11,7 +11,7 @@ export const Icon = ({ src, className }) => {
         display: "inline-block",
       }}
       className={className}
-      src={src}
+      src={require(`../assets${src}`)}
       alt=""
       width="16"
       height="16"

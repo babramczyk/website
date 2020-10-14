@@ -1,5 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
+import FilesIcon from "../assets/icons/files.svg";
+import LinkedInIcon from "../assets/icons/linked-in.svg";
+import GithubIcon from "../assets/icons/github.svg";
+import FileIcon from "../assets/icons/file.svg";
 
 const navItemStyles = {
   cursor: "pointer",
@@ -38,7 +42,7 @@ export const Nav = ({ onNavItemClick, navItemActive }) => {
         title="File explorer"
         onClick={onNavItemClick}
       >
-        <img src="/icons/files.svg" alt="Explorer" />
+        <img src={FilesIcon} alt="Explorer" />
       </div>
       <a
         css={{ ...navItemStyles }}
@@ -47,7 +51,7 @@ export const Nav = ({ onNavItemClick, navItemActive }) => {
         rel="noopener noreferrer"
         title="LinkedIn"
       >
-        <img src="/icons/linked-in.svg" alt="LinkedIn" />
+        <img src={LinkedInIcon} alt="LinkedIn" />
       </a>
       <a
         css={{ ...navItemStyles }}
@@ -56,7 +60,7 @@ export const Nav = ({ onNavItemClick, navItemActive }) => {
         rel="noopener noreferrer"
         title="GitHub"
       >
-        <img src="/icons/github.svg" alt="GitHub" />
+        <img src={GithubIcon} alt="GitHub" />
       </a>
       <a
         css={{ ...navItemStyles }}
@@ -65,7 +69,7 @@ export const Nav = ({ onNavItemClick, navItemActive }) => {
         title="Resume"
       >
         <img
-          src="/icons/file.svg"
+          src={FileIcon}
           alt="Resume"
           css={{ width: "24px", height: "24px" }}
         />

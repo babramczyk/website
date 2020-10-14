@@ -64,7 +64,7 @@ export const PageHeader = ({
               }}
             >
               <img
-                src={imgSrc}
+                src={require(`../assets${imgSrc}`)}
                 css={{
                   objectFit: "cover",
                   ...(!squareImg && {
