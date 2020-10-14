@@ -29,7 +29,7 @@ export default function Layout({ children, location }) {
         display: "flex",
         flexDirection: "column",
         alignItems: "stretch",
-        maxWidth: "1440px",
+        maxWidth: "1080px",
         margin: "0 auto",
       }}
     >

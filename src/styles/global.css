@@ -17,8 +17,9 @@ body {
   background: radial-gradient(
     circle,
     rgba(53, 6, 135, 1) 0%,
-    rgba(115, 22, 199, 1) 62%,
-    rgba(27, 139, 208, 1) 100%
+    rgba(115, 22, 199, 1) 50%,
+    rgb(39, 27, 208) 70%,
+    rgb(27, 136, 208) 100%
   );
   user-select: none;
   padding: 2rem 0.5rem;
