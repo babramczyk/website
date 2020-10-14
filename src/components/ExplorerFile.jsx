@@ -9,7 +9,10 @@ export const ExplorerFile = ({
   onSelect,
   isActive,
   iconSrc = "/icons/markdown.svg",
+  indentLevel = 0,
 }) => {
+  const leftPadding = 2 + indentLevel * 0.75;
+
   return (
     <li>
       <Link
@@ -20,7 +23,7 @@ export const ExplorerFile = ({
           display: "flex",
           alignItems: "center",
           width: "100%",
-          padding: ".125rem 1rem .125rem 2rem",
+          padding: `.125rem 1rem .125rem ${leftPadding}rem`,
           background: isActive ? "#303334" : "initial",
           ":hover": {
             background: "#303334",

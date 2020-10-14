@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import { useState } from "react";
+import { useState, Children, cloneElement, Fragment } from "react";
 import { Icon } from "./Icon";
 
 const chevronStyles = {
@@ -12,13 +12,14 @@ export const ExplorerDirectory = ({ children, dirname }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div css={{ paddingLeft: ".75rem" }}>
+    <Fragment>
       <div
         role="button"
         onClick={() => setIsOpen((isOpen) => !isOpen)}
         css={{
           width: "100%",
           cursor: "pointer",
+          paddingLeft: ".75rem",
           ":hover": {
             background: "#303334",
           },
@@ -34,7 +35,13 @@ export const ExplorerDirectory = ({ children, dirname }) => {
         />
         <span>{dirname}</span>
       </div>
-      {isOpen ? children : null}
-    </div>
+      {isOpen
+        ? // Map over children (should be Explorer* components), and indent them
+          // This is a way keep the components themselves responsible for highlighting while still being the full width of the explorer. Plus, we get to keep composition this way 🤗
+          Children.map(children, (child) => {
+            return cloneElement(child, { indentLevel: 1 });
+          })
+        : null}
+    </Fragment>
   );
 };
