@@ -116,23 +116,5 @@ module.exports = {
         browser: false,
       },
     },
-
-    /**
-     * Test files. Node is enabled, since Jest inherently is ran through Node. Browser is enabled because of the simulated browser env that Jest runs tests in.
-     */
-    // {
-    //   // REVIEW: Jest setup file, test utils, etc. Anything that's not a `spec` file that should be treated in the test env
-    //   files: ['client/**/*.spec.@(js|jsx|ts|tsx)', './jest.setup.js', 'client/test-utils/**/*.(js|jsx|ts|tsx)'],
-    //   extends: ['plugin:jest/recommended'],
-    //   plugins: ['jest'],
-    //   env: {
-    //     jest: true,
-    //     node: true,
-    //     browser: true,
-    //   },
-    //   rules: {
-    //     'jest/prefer-to-have-length': 2,
-    //   },
-    // },
   ],
 };
