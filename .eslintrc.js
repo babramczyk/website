@@ -107,16 +107,16 @@ module.exports = {
   },
   overrides: [
     /**
-     * Files only ran in the browser. Modify this to point at the client/src directory, depending on the project
+     * Node files
      */
-    // {
-    //   files: ['client/**/*+(js|jsx|ts|tsx)'],
-    //   env: {
-    //     jest: true,
-    //     node: false,
-    //     browser: true,
-    //   },
-    // },
+    {
+      files: [".eslintrc.js", "./gatsby-*.js"],
+      env: {
+        node: true,
+        browser: false,
+      },
+    },
+
     /**
      * Test files. Node is enabled, since Jest inherently is ran through Node. Browser is enabled because of the simulated browser env that Jest runs tests in.
      */
