@@ -13,7 +13,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "validate": "concurrently --names=\"build,lint,format\" --prefix-colors=\"magenta.bold,blue.bold,yellow.bold\" \"yarn build\" \"yarn lint\" \"yarn format\""
+    "validate": "concurrently --names='build,lint,format' --prefix-colors='magenta.bold,blue.bold,yellow.bold' 'yarn build' 'yarn lint' 'yarn format'"
   },
   "dependencies": {
     "@emotion/core": "^10.0.35",
