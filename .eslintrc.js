@@ -100,6 +100,11 @@ module.exports = {
     "constructor-super": 2,
 
     /**
+     * React
+     */
+    "react/prop-types": 0,
+
+    /**
      * React hooks
      */
     "react-hooks/rules-of-hooks": 2,
