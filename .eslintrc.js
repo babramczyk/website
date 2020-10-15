@@ -9,6 +9,7 @@ module.exports = {
   extends: ["plugin:react/recommended", "plugin:jsx-a11y/recommended"],
   env: {
     es6: true,
+    node: true,
   },
   parserOptions: {
     ecmaVersion: 9,
