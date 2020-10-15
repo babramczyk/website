@@ -18,6 +18,7 @@ module.exports = {
       version: "detect",
     },
   },
+  ignorePatterns: ["dist/", "build/", "coverage/", ".cache/", "public/"],
 
   rules: {
     /**
