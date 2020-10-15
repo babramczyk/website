@@ -7,7 +7,7 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
-    "lint": "eslint .",
+    "lint": "eslint . --ext js,jsx",
     "format": "prettier --write --loglevel=error .",
     "start": "yarn develop",
     "serve": "gatsby serve",
