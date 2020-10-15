@@ -1,11 +1,12 @@
 module.exports = {
-  // Dep names: 'eslint-plugin-jest', 'eslint-plugin-react', 'eslint-plugin-react-hooks', '@typescript-eslint/eslint-plugin', '@typescript-eslint/parser'
+  // Dep names: 'eslint-plugin-jest', 'eslint-plugin-react', 'eslint-plugin-react-hooks', '@typescript-eslint/eslint-plugin', '@typescript-eslint/parser', 'eslint-plugin-jsx-a11y'
 
   // REVIEW: React plugins and rules
   // REVIEW: TypeScript rules/config (file extensions, plugins, parsers, etc.)
+  // REVIEW: jsx-a11y
 
-  plugins: ["react-hooks"],
-  extends: ["plugin:react/recommended"],
+  plugins: ["react-hooks", "jsx-a11y"],
+  extends: ["plugin:react/recommended", "plugin:jsx-a11y/recommended"],
   env: {
     es6: true,
   },
