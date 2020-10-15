@@ -97,3 +97,24 @@ body {
 [hidden] {
   display: none !important;
 }
+
+/***************************************
+* Custom
+***************************************/
+
+/* Override default button styles, to make them look like a <div>. See here: https://css-tricks.com/overriding-default-button-styles/ */
+button {
+  display: block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  background: none;
+  font-family: inherit;
+  font-size: 100%;
+  cursor: pointer;
+  color: inherit;
+  text-align: left;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}

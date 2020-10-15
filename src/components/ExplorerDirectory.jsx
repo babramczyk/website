@@ -13,8 +13,7 @@ export const ExplorerDirectory = ({ children, dirname }) => {
 
   return (
     <Fragment>
-      <div
-        role="button"
+      <button
         onClick={() => setIsOpen((isOpen) => !isOpen)}
         css={{
           width: "100%",
@@ -22,6 +21,9 @@ export const ExplorerDirectory = ({ children, dirname }) => {
           paddingLeft: ".75rem",
           ":hover": {
             background: "#303334",
+          },
+          ":focus": {
+            outline: "none",
           },
         }}
       >
@@ -34,7 +36,7 @@ export const ExplorerDirectory = ({ children, dirname }) => {
           css={chevronStyles}
         />
         <span>{dirname}</span>
-      </div>
+      </button>
       {isOpen
         ? // Map over children (should be Explorer* components), and indent them
           // This is a way keep the components themselves responsible for highlighting while still being the full width of the explorer. Plus, we get to keep composition this way 🤗
