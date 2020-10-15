@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "abramczyk.dev",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Brett Abramczyk's personal website",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
