@@ -33,17 +33,16 @@ export const Nav = ({ onNavItemClick, navItemActive }) => {
         alignItems: "stretch",
       }}
     >
-      <div
+      <button
         css={{
           ...navItemStyles,
           ...(navItemActive && activeNavItemStyles),
         }}
-        role="button"
         title="File explorer"
         onClick={onNavItemClick}
       >
         <img src={FilesIcon} alt="Explorer" />
-      </div>
+      </button>
       <a
         css={{ ...navItemStyles }}
         href="//linkedin.com/in/brett-abramczyk"
