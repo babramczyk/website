@@ -4,6 +4,7 @@ import FilesIcon from "../assets/icons/files.svg";
 import LinkedInIcon from "../assets/icons/linked-in.svg";
 import GithubIcon from "../assets/icons/github.svg";
 import FileIcon from "../assets/icons/file.svg";
+import { mouseFocusSelector } from "../utils/mouseFocusSelector";
 
 const navItemStyles = {
   cursor: "pointer",
@@ -14,6 +15,9 @@ const navItemStyles = {
   filter: "brightness(.7)",
   ":hover": {
     filter: "brightness(1)",
+  },
+  [mouseFocusSelector]: {
+    outline: "none",
   },
 };
 

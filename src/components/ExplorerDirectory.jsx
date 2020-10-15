@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { useState, Children, cloneElement, Fragment } from "react";
+import { mouseFocusSelector } from "../utils/mouseFocusSelector";
 import { Icon } from "./Icon";
 
 const chevronStyles = {
@@ -22,7 +23,7 @@ export const ExplorerDirectory = ({ children, dirname }) => {
           ":hover": {
             background: "#303334",
           },
-          ":focus": {
+          [mouseFocusSelector]: {
             outline: "none",
           },
         }}
