@@ -11,10 +11,8 @@ export const ExplorerFile = ({
   iconSrc = "/icons/markdown.svg",
   indentLevel = 0,
 }) => {
-  const leftPadding = 2 + indentLevel * 0.75;
-
   return (
-    <li>
+    <li css={{ paddingLeft: `${indentLevel * 0.75}rem` }}>
       <Link
         to={destRoute}
         css={{
@@ -23,7 +21,7 @@ export const ExplorerFile = ({
           display: "flex",
           alignItems: "center",
           width: "100%",
-          padding: `.125rem 1rem .125rem ${leftPadding}rem`,
+          padding: ".125rem 1rem .125rem 2rem",
           background: isActive ? "#303334" : "initial",
           ":hover": {
             background: "#303334",
