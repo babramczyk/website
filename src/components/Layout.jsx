@@ -57,16 +57,7 @@ export default function Layout({ children, location, location: { state } }) {
           navItemActive={explorerVisible}
         />
         {explorerVisible && (
-          <Explorer
-            // TODO: Handle this now that we don't have client side routing
-            // onFileSelect={() => {
-            //   if (isMobile) {
-            //     setExplorerVisible(false);
-            //   }
-            // }}
-            activeFile={currentFilename}
-            initiallyOpenDirs={openDirs}
-          />
+          <Explorer activeFile={currentFilename} initiallyOpenDirs={openDirs} />
         )}
         <Editor tabTitle={currentFilename}>{children}</Editor>
       </div>
