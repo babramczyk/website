@@ -16,6 +16,7 @@ const pathnamesToFilenames = {
   "/books/": "Books.md",
   "/northwestern-mutual/": "NorthwesternMutual.md",
   "/school/": "School.md",
+  "/skills/": "Skills.md",
   "/toolkit/": "Toolkit.md",
 };
 
