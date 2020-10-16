@@ -44,6 +44,8 @@ blockquote {
   margin-left: 1rem;
   padding: 0 1rem;
   color: #6a737d;
+  /* Using `!important` to override this in any place. That seems like a reasonable assumption */
+  text-align: left !important;
 }
 
 @media (max-width: 640px) {
