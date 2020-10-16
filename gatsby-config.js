@@ -14,7 +14,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {
-          default: path.resolve("./src/components/Layout.js"),
+          default: path.resolve("./src/components/Layout.jsx"),
         },
       },
     },
