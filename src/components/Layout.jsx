@@ -8,8 +8,19 @@ import { TitleBar } from "./TitleBar";
 import { useMediaQuery } from "@react-hook/media-query";
 import { Helmet } from "react-helmet";
 
+const pathnamesToFilenames = {
+  "/": "README.md",
+  "/10-factor/": "10Factor.md",
+  "/akitabox/": "AkitaBox.md",
+  "/ancilla-partners/": "AnicillaPartners.md",
+  "/books/": "Books.md",
+  "/northwestern-mutual/": "NorthwesternMutual.md",
+  "/school/": "School.md",
+  "/toolkit/": "Toolkit.md",
+};
+
 export default function Layout({ children, location, location: { state } }) {
-  const currentFilename = `${location.pathname.split("/")[1] || "README"}.md`;
+  const currentFilename = pathnamesToFilenames[location.pathname];
   const { openDirs } = state || {};
 
   const [explorerVisible, setExplorerVisible] = useState(true);

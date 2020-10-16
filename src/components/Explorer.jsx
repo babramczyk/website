@@ -69,28 +69,28 @@ export const Explorer = ({ activeFile, initiallyOpenDirs = ["Timeline"] }) => {
           }}
         >
           <ExplorerFile
-            destRoute="/School/"
+            destRoute="/school/"
             filename="School.md"
             isActive={activeFile === "School.md"}
             iconSrc="/uw-madison.png"
             openDirs={openDirs}
           />
           <ExplorerFile
-            destRoute="/AncillaPartners/"
+            destRoute="/ancilla-partners/"
             filename="AncillaPartners.md"
             isActive={activeFile === "AncillaPartners.md"}
             iconSrc="/ancilla-partners__inverted-transparent.png"
             openDirs={openDirs}
           />
           <ExplorerFile
-            destRoute="/AkitaBox/"
+            destRoute="/akitabox/"
             filename="AkitaBox.md"
             isActive={activeFile === "AkitaBox.md"}
             iconSrc="/akitabox.png"
             openDirs={openDirs}
           />
           <ExplorerFile
-            destRoute="/NorthwesternMutual/"
+            destRoute="/northwestern-mutual/"
             filename="NorthwesternMutual.md"
             isActive={activeFile === "NorthwesternMutual.md"}
             iconSrc="/nm.png"
@@ -98,19 +98,19 @@ export const Explorer = ({ activeFile, initiallyOpenDirs = ["Timeline"] }) => {
           />
         </ExplorerDirectory>
         <ExplorerFile
-          destRoute="/10Factor/"
+          destRoute="/10-factor/"
           filename="10Factor.md"
           isActive={activeFile === "10Factor.md"}
           openDirs={openDirs}
         />
         <ExplorerFile
-          destRoute="/Toolkit/"
+          destRoute="/toolkit/"
           filename="Toolkit.md"
           isActive={activeFile === "Toolkit.md"}
           openDirs={openDirs}
         />
         <ExplorerFile
-          destRoute="/Skills/"
+          destRoute="/skills/"
           filename="Skills.md"
           isActive={activeFile === "Skills.md"}
           openDirs={openDirs}
