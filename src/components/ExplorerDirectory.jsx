@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import { useState, Children, cloneElement, Fragment } from "react";
+import { Children, cloneElement, Fragment } from "react";
 import { mouseFocusSelector } from "../utils/mouseFocusSelector";
 import { Icon } from "./Icon";
 
