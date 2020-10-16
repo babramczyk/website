@@ -10,8 +10,10 @@ export const ExplorerFile = ({
   indentLevel = 0,
   openDirs,
 }) => {
+  const paddingLeft = 2 + indentLevel * 0.75;
+
   return (
-    <li css={{ paddingLeft: `${indentLevel * 0.75}rem` }}>
+    <li>
       <Link
         to={destRoute}
         css={{
@@ -20,7 +22,7 @@ export const ExplorerFile = ({
           display: "flex",
           alignItems: "center",
           width: "100%",
-          padding: ".125rem 1rem .125rem 2rem",
+          padding: `.125rem 1rem .125rem ${paddingLeft}rem`,
           ":hover": {
             background: "#303334",
           },
