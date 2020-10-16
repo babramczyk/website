@@ -6,10 +6,9 @@ import { Icon } from "./Icon";
 export const ExplorerFile = ({
   destRoute,
   filename,
-  onSelect,
-  isActive,
   iconSrc = "/icons/markdown.svg",
   indentLevel = 0,
+  openDirs,
 }) => {
   return (
     <li css={{ paddingLeft: `${indentLevel * 0.75}rem` }}>
@@ -22,12 +21,14 @@ export const ExplorerFile = ({
           alignItems: "center",
           width: "100%",
           padding: ".125rem 1rem .125rem 2rem",
-          background: isActive ? "#303334" : "initial",
           ":hover": {
             background: "#303334",
           },
         }}
-        onClick={onSelect}
+        activeStyle={{
+          background: "#303334",
+        }}
+        state={{ openDirs }}
       >
         <Icon src={iconSrc} />
         <span>{filename}</span>

@@ -8,8 +8,9 @@ import { TitleBar } from "./TitleBar";
 import { useMediaQuery } from "@react-hook/media-query";
 import { Helmet } from "react-helmet";
 
-export default function Layout({ children, location }) {
+export default function Layout({ children, location, location: { state } }) {
   const currentFilename = `${location.pathname.split("/")[1] || "README"}.md`;
+  const { openDirs } = state || {};
 
   const [explorerVisible, setExplorerVisible] = useState(true);
 
@@ -57,12 +58,14 @@ export default function Layout({ children, location }) {
         />
         {explorerVisible && (
           <Explorer
-            onFileSelect={() => {
-              if (isMobile) {
-                setExplorerVisible(false);
-              }
-            }}
+            // TODO: Handle this now that we don't have client side routing
+            // onFileSelect={() => {
+            //   if (isMobile) {
+            //     setExplorerVisible(false);
+            //   }
+            // }}
             activeFile={currentFilename}
+            initiallyOpenDirs={openDirs}
           />
         )}
         <Editor tabTitle={currentFilename}>{children}</Editor>

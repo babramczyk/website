@@ -9,13 +9,11 @@ const chevronStyles = {
   position: "relative",
 };
 
-export const ExplorerDirectory = ({ children, dirname }) => {
-  const [isOpen, setIsOpen] = useState(true);
-
+export const ExplorerDirectory = ({ children, dirname, onClick, isOpen }) => {
   return (
     <Fragment>
       <button
-        onClick={() => setIsOpen((isOpen) => !isOpen)}
+        onClick={() => onClick(!isOpen)}
         css={{
           width: "100%",
           cursor: "pointer",

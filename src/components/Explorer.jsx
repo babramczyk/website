@@ -1,9 +1,12 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
+import { useState } from "react";
 import { ExplorerDirectory } from "./ExplorerDirectory";
 import { ExplorerFile } from "./ExplorerFile";
 
-export const Explorer = ({ onFileSelect, activeFile }) => {
+export const Explorer = ({ activeFile, initiallyOpenDirs = ["Timeline"] }) => {
+  const [openDirs, setOpenDirs] = useState(initiallyOpenDirs);
+
   return (
     <div
       css={{
@@ -48,69 +51,75 @@ export const Explorer = ({ onFileSelect, activeFile }) => {
         <ExplorerFile
           destRoute="/"
           filename="README.md"
-          onSelect={onFileSelect}
           isActive={activeFile === "README.md"}
           iconSrc="/icons/info.svg"
+          openDirs={openDirs}
         />
-        <ExplorerDirectory dirname="Timeline">
+        <ExplorerDirectory
+          dirname="Timeline"
+          isOpen={isDirOpen("Timeline")}
+          onClick={(isOpen) => {
+            if (isOpen) {
+              setOpenDirs((openDirs) => openDirs.concat(["Timeline"]));
+            } else {
+              setOpenDirs((openDirs) =>
+                openDirs.filter((dir) => dir !== "Timeline")
+              );
+            }
+          }}
+        >
           <ExplorerFile
-            destRoute="/School"
+            destRoute="/School/"
             filename="School.md"
-            onSelect={onFileSelect}
             isActive={activeFile === "School.md"}
             iconSrc="/uw-madison.png"
+            openDirs={openDirs}
           />
           <ExplorerFile
-            destRoute="/AncillaPartners"
+            destRoute="/AncillaPartners/"
             filename="AncillaPartners.md"
-            onSelect={onFileSelect}
             isActive={activeFile === "AncillaPartners.md"}
             iconSrc="/ancilla-partners__inverted-transparent.png"
+            openDirs={openDirs}
           />
           <ExplorerFile
-            destRoute="/AkitaBox"
+            destRoute="/AkitaBox/"
             filename="AkitaBox.md"
-            onSelect={onFileSelect}
             isActive={activeFile === "AkitaBox.md"}
             iconSrc="/akitabox.png"
+            openDirs={openDirs}
           />
           <ExplorerFile
-            destRoute="/NorthwesternMutual"
+            destRoute="/NorthwesternMutual/"
             filename="NorthwesternMutual.md"
-            onSelect={onFileSelect}
             isActive={activeFile === "NorthwesternMutual.md"}
             iconSrc="/nm.png"
+            openDirs={openDirs}
           />
         </ExplorerDirectory>
         <ExplorerFile
-          destRoute="/10Factor"
+          destRoute="/10Factor/"
           filename="10Factor.md"
-          onSelect={onFileSelect}
           isActive={activeFile === "10Factor.md"}
+          openDirs={openDirs}
         />
         <ExplorerFile
-          destRoute="/Toolkit"
+          destRoute="/Toolkit/"
           filename="Toolkit.md"
-          onSelect={onFileSelect}
           isActive={activeFile === "Toolkit.md"}
+          openDirs={openDirs}
         />
         <ExplorerFile
-          destRoute="/Skills"
+          destRoute="/Skills/"
           filename="Skills.md"
-          onSelect={onFileSelect}
           isActive={activeFile === "Skills.md"}
+          openDirs={openDirs}
         />
       </ul>
     </div>
   );
-};
 
-export const FILENAMES = [
-  "NorthwesternMutual.md",
-  "Toolkit.md",
-  "AkitaBox.md",
-  "AncillaPartners.md",
-  "School.md",
-  "Skills.md",
-  "10Factor.md",
-];
+  function isDirOpen(dirname) {
+    return openDirs.includes(dirname);
+  }
+};
