@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core";
 import { Explorer } from "./Explorer";
 import { Nav } from "./Nav";
 import { Editor } from "./Editor";
-import { useEffect, useState } from "react";
+import { Fragment, useState } from "react";
 import { TitleBar } from "./TitleBar";
 import { useMediaQuery } from "@react-hook/media-query";
 import { Helmet } from "react-helmet";
@@ -24,14 +24,10 @@ export default function Layout({ children, location, location: { state } }) {
   const currentFilename = pathnamesToFilenames[location.pathname];
   const { openDirs } = state || {};
 
-  const [explorerVisible, setExplorerVisible] = useState(true);
+  const isClient = typeof window !== "undefined";
 
   const isMobile = useMediaQuery("(max-width: 768px)");
-  useEffect(() => {
-    if (isMobile) {
-      setExplorerVisible(false);
-    }
-  }, [isMobile]);
+  const [explorerVisible, setExplorerVisible] = useState(isClient && !isMobile);
 
   return (
     <div
@@ -62,16 +58,26 @@ export default function Layout({ children, location, location: { state } }) {
           minHeight: "0",
         }}
       >
-        <Nav
-          onNavItemClick={() => {
-            setExplorerVisible((vis) => !vis);
-          }}
-          navItemActive={explorerVisible}
-        />
-        {explorerVisible && (
-          <Explorer activeFile={currentFilename} initiallyOpenDirs={openDirs} />
+        {/* Because of rehydration issues, there's some components that don't really make sense to render statically. For example, we don't know what `openDirs` will be until the browser evaluates `window.history`, we don't know if the user is on a mobile device or not until the browser loads the page, etc.
+        
+            So... The strategy here is to render everything we can that we know won't change or cause flickering statically, and hide the rest until the browser/React takes over rendering*/}
+        {isClient && (
+          <Fragment>
+            <Nav
+              onNavItemClick={() => {
+                setExplorerVisible((vis) => !vis);
+              }}
+              navItemActive={explorerVisible}
+            />
+            {explorerVisible && (
+              <Explorer
+                activeFile={currentFilename}
+                initiallyOpenDirs={openDirs}
+              />
+            )}
+            <Editor tabTitle={currentFilename}>{children}</Editor>
+          </Fragment>
         )}
-        <Editor tabTitle={currentFilename}>{children}</Editor>
       </div>
     </div>
   );
