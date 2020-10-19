@@ -8,7 +8,6 @@ export const ExplorerFile = ({
   filename,
   iconSrc = "/icons/markdown.svg",
   indentLevel = 0,
-  openDirs,
 }) => {
   const paddingLeft = 2 + indentLevel * 0.75;
 
@@ -30,7 +29,6 @@ export const ExplorerFile = ({
         activeStyle={{
           background: "#303334",
         }}
-        state={{ openDirs }}
       >
         <Icon src={iconSrc} />
         <span>{filename}</span>

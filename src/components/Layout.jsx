@@ -20,9 +20,8 @@ const pathnamesToFilenames = {
   "/toolkit/": "Toolkit.md",
 };
 
-export default function Layout({ children, location, location: { state } }) {
+export default function Layout({ children, location }) {
   const currentFilename = pathnamesToFilenames[location.pathname];
-  const { openDirs } = state || {};
 
   const isClient = typeof window !== "undefined";
 
@@ -69,12 +68,7 @@ export default function Layout({ children, location, location: { state } }) {
               }}
               navItemActive={explorerVisible}
             />
-            {explorerVisible && (
-              <Explorer
-                activeFile={currentFilename}
-                initiallyOpenDirs={openDirs}
-              />
-            )}
+            {explorerVisible && <Explorer activeFile={currentFilename} />}
             <Editor tabTitle={currentFilename}>{children}</Editor>
           </Fragment>
         )}

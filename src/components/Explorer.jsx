@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import { useState } from "react";
+import { useSessionStorage } from "../hooks/useSessionStorage";
 import { ExplorerDirectory } from "./ExplorerDirectory";
 import { ExplorerFile } from "./ExplorerFile";
 
-export const Explorer = ({ activeFile, initiallyOpenDirs = ["Timeline"] }) => {
-  const [openDirs, setOpenDirs] = useState(initiallyOpenDirs);
+export const Explorer = ({ activeFile }) => {
+  const [openDirs, setOpenDirs] = useSessionStorage("openDirs", ["Timeline"]);
 
   return (
     <div
@@ -53,7 +53,6 @@ export const Explorer = ({ activeFile, initiallyOpenDirs = ["Timeline"] }) => {
           filename="README.md"
           isActive={activeFile === "README.md"}
           iconSrc="/icons/info.svg"
-          openDirs={openDirs}
         />
         <ExplorerDirectory
           dirname="Timeline"
@@ -73,47 +72,40 @@ export const Explorer = ({ activeFile, initiallyOpenDirs = ["Timeline"] }) => {
             filename="School.md"
             isActive={activeFile === "School.md"}
             iconSrc="/uw-madison.png"
-            openDirs={openDirs}
           />
           <ExplorerFile
             destRoute="/ancilla-partners/"
             filename="AncillaPartners.md"
             isActive={activeFile === "AncillaPartners.md"}
             iconSrc="/ancilla-partners__inverted-transparent.png"
-            openDirs={openDirs}
           />
           <ExplorerFile
             destRoute="/akitabox/"
             filename="AkitaBox.md"
             isActive={activeFile === "AkitaBox.md"}
             iconSrc="/akitabox.png"
-            openDirs={openDirs}
           />
           <ExplorerFile
             destRoute="/northwestern-mutual/"
             filename="NorthwesternMutual.md"
             isActive={activeFile === "NorthwesternMutual.md"}
             iconSrc="/nm.png"
-            openDirs={openDirs}
           />
         </ExplorerDirectory>
         <ExplorerFile
           destRoute="/10-factor/"
           filename="10Factor.md"
           isActive={activeFile === "10Factor.md"}
-          openDirs={openDirs}
         />
         <ExplorerFile
           destRoute="/toolkit/"
           filename="Toolkit.md"
           isActive={activeFile === "Toolkit.md"}
-          openDirs={openDirs}
         />
         <ExplorerFile
           destRoute="/skills/"
           filename="Skills.md"
           isActive={activeFile === "Skills.md"}
-          openDirs={openDirs}
         />
       </ul>
     </div>
