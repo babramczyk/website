@@ -42,7 +42,12 @@ export default function Layout({ children, location }) {
       }}
     >
       <Helmet>
-        <title>abramczyk.dev</title>
+        <title>
+          abramczyk.dev
+          {currentFilename && currentFilename !== "README.md"
+            ? ` | ${currentFilename}`
+            : ""}
+        </title>
         <meta
           name="description"
           content="👋 I'm Brett Abramczyk. Come and learn more about me and what I do as a software engineer!"
