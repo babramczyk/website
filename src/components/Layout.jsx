@@ -12,7 +12,7 @@ const pathnamesToFilenames = {
   "/": "README.md",
   "/10-factor/": "10Factor.md",
   "/akitabox/": "AkitaBox.md",
-  "/ancilla-partners/": "AnicillaPartners.md",
+  "/ancilla-partners/": "AncillaPartners.md",
   "/books/": "Books.md",
   "/northwestern-mutual/": "NorthwesternMutual.md",
   "/school/": "School.md",
