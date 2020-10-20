@@ -41,7 +41,6 @@ export const PageHeader = ({
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          textAlign: "center",
         }}
       >
         <h1
@@ -77,17 +76,23 @@ export const PageHeader = ({
           )}
           {title}
         </h1>
-        {secondary && (
-          <p>
-            <strong>{secondary}</strong>
-          </p>
-        )}
-        {positionsDisplay}
-        {dateRange && (
-          <p>
-            <em>{dateRange}</em>
-          </p>
-        )}
+        <div
+          css={{
+            textAlign: "center",
+          }}
+        >
+          {secondary && (
+            <p>
+              <strong>{secondary}</strong>
+            </p>
+          )}
+          {positionsDisplay}
+          {dateRange && (
+            <p>
+              <em>{dateRange}</em>
+            </p>
+          )}
+        </div>
         {children}
       </header>
 
