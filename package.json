@@ -6,7 +6,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby develop",
+    "dev": "gatsby develop -o",
     "lint": "eslint . --ext js,jsx",
     "format": "prettier --write --loglevel=error .",
     "start": "yarn develop",
