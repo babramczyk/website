@@ -3,14 +3,19 @@
 }
 
 @keyframes wallpaper {
-  0% {
-    background-position: 0% 50%;
+  from {
+    background-size: 101% 101%;
+    background-position: 10% 50%;
   }
+
   50% {
-    background-position: 100% 50%;
+    background-size: 150% 151%;
+    background-position: 60% 20%;
   }
+
   100% {
-    background-position: 0% 50%;
+    background-size: 125% 125%;
+    background-position: 35% 70%;
   }
 }
 
@@ -30,15 +35,14 @@ body {
   padding: 2rem 0.5rem;
 
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-  background: linear-gradient(
-    -45deg,
+  background: radial-gradient(
+    circle,
     rgba(53, 6, 135, 1) 0%,
-    rgba(115, 22, 199, 1) 50%,
-    rgb(39, 27, 208) 70%,
-    rgb(27, 136, 208) 100%
+    rgba(115, 22, 199, 1) 40%,
+    rgb(39, 27, 208) 55%,
+    rgb(27, 136, 208) 75%
   );
-  background-size: 200% 200%;
-  animation: wallpaper 20s ease-in-out infinite;
+  animation: wallpaper 30s ease-in-out infinite alternate;
 }
 
 #___gatsby {
