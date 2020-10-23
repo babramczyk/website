@@ -8,13 +8,13 @@
       "type": "image/x-icon"
     },
     {
-      "src": "headshot-192.png",
-      "type": "image/png",
+      "src": "headshot.jpg",
+      "type": "image/jpg",
       "sizes": "192x192"
     },
     {
-      "src": "headshot-512.png",
-      "type": "image/png",
+      "src": "headshot.jpg",
+      "type": "image/jpg",
       "sizes": "512x512"
     }
   ],
