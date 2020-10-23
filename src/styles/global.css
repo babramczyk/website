@@ -78,18 +78,17 @@ body::before {
   height: 150%;
   z-index: -1;
 
-  /* opacity: .6; */
+  opacity: 0.6;
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
   background: rgb(79, 26, 165);
   background: radial-gradient(
-    circle,
-    rgb(113, 85, 162) 0%,
-    rgb(130, 90, 182) 20%,
-    rgb(110, 102, 224) 50%,
-    rgb(117, 201, 223) 70%
+    circle at 0 0,
+    rgb(43, 1, 116) 0%,
+    rgb(68, 8, 146) 20%,
+    rgba(39, 27, 208) 50%,
+    rgba(39, 183, 219) 70%
   );
-  animation: wallpaper 90s 1.5s ease infinite;
-  transform: translate(-25%, -25%);
+  /* animation: wallpaper 90s 1.5s ease infinite; */
 }
 
 #___gatsby {
