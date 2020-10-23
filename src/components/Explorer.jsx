@@ -68,16 +68,10 @@ export const Explorer = ({ activeFile }) => {
           }}
         >
           <ExplorerFile
-            destRoute="/school/"
-            filename="School.md"
-            isActive={activeFile === "School.md"}
-            iconSrc="/uw-madison.png"
-          />
-          <ExplorerFile
-            destRoute="/ancilla-partners/"
-            filename="AncillaPartners.md"
-            isActive={activeFile === "AncillaPartners.md"}
-            iconSrc="/ancilla-partners__inverted-transparent.png"
+            destRoute="/northwestern-mutual/"
+            filename="NorthwesternMutual.md"
+            isActive={activeFile === "NorthwesternMutual.md"}
+            iconSrc="/nm.png"
           />
           <ExplorerFile
             destRoute="/akitabox/"
@@ -86,10 +80,16 @@ export const Explorer = ({ activeFile }) => {
             iconSrc="/akitabox.png"
           />
           <ExplorerFile
-            destRoute="/northwestern-mutual/"
-            filename="NorthwesternMutual.md"
-            isActive={activeFile === "NorthwesternMutual.md"}
-            iconSrc="/nm.png"
+            destRoute="/ancilla-partners/"
+            filename="AncillaPartners.md"
+            isActive={activeFile === "AncillaPartners.md"}
+            iconSrc="/ancilla-partners__inverted-transparent.png"
+          />
+          <ExplorerFile
+            destRoute="/school/"
+            filename="School.md"
+            isActive={activeFile === "School.md"}
+            iconSrc="/uw-madison.png"
           />
         </ExplorerDirectory>
         <ExplorerFile
