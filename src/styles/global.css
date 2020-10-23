@@ -78,19 +78,15 @@ body::before {
   height: 150%;
   z-index: -1;
 
+  /* opacity: .6; */
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
   background: rgb(79, 26, 165);
   background: radial-gradient(
     circle,
-    rgb(43, 1, 116, 0.7) 0%,
-    rgb(68, 8, 146, 0.7) 20%,
-    rgb(79, 26, 165, 0.7) 30%,
-    rgba(75, 22, 199, 0.7) 40%,
-    rgba(66, 27, 208, 0.7) 45%,
-    rgba(39, 27, 208, 0.7) 50%,
-    rgba(27, 75, 208, 0.7) 60%,
-    rgba(27, 136, 208, 0.7) 70%,
-    rgba(39, 183, 219, 0.7) 80%
+    rgb(113, 85, 162) 0%,
+    rgb(130, 90, 182) 20%,
+    rgb(110, 102, 224) 50%,
+    rgb(117, 201, 223) 70%
   );
   animation: wallpaper 90s 1.5s ease infinite;
   transform: translate(-25%, -25%);
