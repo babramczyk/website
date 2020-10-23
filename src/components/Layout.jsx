@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core";
 import { Explorer } from "./Explorer";
 import { Nav } from "./Nav";
 import { Editor } from "./Editor";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { TitleBar } from "./TitleBar";
 import { useMediaQuery } from "@react-hook/media-query";
 import { Helmet } from "react-helmet";
@@ -27,6 +27,10 @@ export default function Layout({ children, location }) {
 
   const isMobile = useMediaQuery("(max-width: 768px)");
   const [explorerVisible, setExplorerVisible] = useState(isClient && !isMobile);
+
+  useEffect(() => {
+    setExplorerVisible(!isMobile);
+  }, [isMobile, setExplorerVisible]);
 
   return (
     <div
