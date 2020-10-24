@@ -27,7 +27,7 @@ export const PageHeader = ({
         {positions.map((position, index) => (
           <Fragment key={position}>
             <strong>{position}</strong>
-            {index !== positions.length - 1 ? " | " : null}
+            {index !== positions.length - 1 ? " → " : null}
           </Fragment>
         ))}
       </span>
