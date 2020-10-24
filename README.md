@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Gatsby" src="/src/assets/headshot.png" width="60" style="border-radius: 50%" />
+  <img alt="" src="/src/assets/headshot.jpg" width="60" style="border-radius: 50%" />
 </p>
 <h1 align="center">
   //abramczyk.dev
