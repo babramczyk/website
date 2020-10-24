@@ -50,6 +50,7 @@ export const PageHeader = ({
             "@media (max-width: 768px)": {
               flexDirection: "column",
             },
+            padding: ".5rem 0",
           }}
         >
           {imgSrc && (
