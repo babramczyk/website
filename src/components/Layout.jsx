@@ -21,7 +21,7 @@ const pathnamesToFilenames = {
 };
 
 export default function Layout({ children, location }) {
-  const currentFilename = pathnamesToFilenames[location.pathname];
+  const currentFilename = pathnamesToFilenames[location.pathname] || "404.md";
 
   const isClient = typeof window !== "undefined";
 
