@@ -5,6 +5,7 @@ import LinkedInIcon from "../assets/icons/linked-in.svg";
 import GithubIcon from "../assets/icons/github.svg";
 import FileIcon from "../assets/icons/file.svg";
 import { mouseFocusSelector } from "../utils/mouseFocusSelector";
+import Resume from "../assets/brett-abramczyk.pdf";
 
 const navItemStyles = {
   cursor: "pointer",
@@ -67,8 +68,9 @@ export const Nav = ({ onNavItemClick, navItemActive }) => {
       </a>
       <a
         css={{ ...navItemStyles }}
-        href="/brett-abramczyk.pdf"
+        href={Resume}
         target="_blank"
+        rel="noreferrer"
         title="Resume"
       >
         <img
