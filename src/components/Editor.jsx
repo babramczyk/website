@@ -20,7 +20,7 @@ export const Editor = ({ children, tabTitle }) => {
         <div
           css={{
             padding: "2rem",
-            maxWidth: "80ch",
+            maxWidth: "65ch",
             userSelect: "text",
             margin: "0 auto",
           }}
