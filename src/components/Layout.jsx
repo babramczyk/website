@@ -49,7 +49,7 @@ export default function Layout({ children, location }) {
     >
       <Helmet>
         <title>
-          abramczyk.dev
+          Brett Abramczyk
           {currentFilename && currentFilename !== "README.md"
             ? ` | ${currentFilename}`
             : ""}
