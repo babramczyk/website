@@ -32,6 +32,49 @@ export default function Layout({ children, location }) {
     setExplorerVisible(!isMobile);
   }, [isMobile, setExplorerVisible]);
 
+  useEffect(() => {
+    CSS.registerProperty({
+      // The name of our property, should match what we use in our CSS:
+      name: '--color-1',
+      // How we want to interpolate that value, when it changes:
+      scale: '<color>',
+      // Whether it should inherit its value from the cascade
+      // (like `font-size` does), or not (like `position` doesn't)
+      inherits: false,
+      initialValue: ' hsl(43, 50%, 50%)',
+    });
+    CSS.registerProperty({
+      // The name of our property, should match what we use in our CSS:
+      name: '--color-2',
+      // How we want to interpolate that value, when it changes:
+      scale: '<color>',
+      // Whether it should inherit its value from the cascade
+      // (like `font-size` does), or not (like `position` doesn't)
+      inherits: false,
+      initialValue: 'hsl(120, 50%, 50%)',
+    });
+    CSS.registerProperty({
+      // The name of our property, should match what we use in our CSS:
+      name: '--color-3',
+      // How we want to interpolate that value, when it changes:
+      scale: '<color>',
+      // Whether it should inherit its value from the cascade
+      // (like `font-size` does), or not (like `position` doesn't)
+      inherits: false,
+      initialValue: 'hsl(200, 50%, 50%)',
+    });
+    CSS.registerProperty({
+      // The name of our property, should match what we use in our CSS:
+      name: '--color-4',
+      // How we want to interpolate that value, when it changes:
+      scale: '<color>',
+      // Whether it should inherit its value from the cascade
+      // (like `font-size` does), or not (like `position` doesn't)
+      inherits: false,
+      initialValue: 'hsl(250, 50%, 50%)',
+    });
+  }, [])
+
   return (
     <div
       css={{

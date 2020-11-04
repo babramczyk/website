@@ -69,6 +69,43 @@ body {
   }
 }
 
+:root {
+  --color-1: hsl(43, 50%, 50%);
+  --color-2: hsl(120, 50%, 50%);
+  --color-3: hsl(200, 50%, 50%);
+  --color-4: hsl(250, 50%, 50%);
+}
+
+@keyframes gradient {
+  from {
+    --color-1: hsl(43, 50%, 50%);
+    /* --color-2: hsl(120, 50%, 50%);
+    --color-3: hsl(200, 50%, 50%);
+    --color-4: hsl(250, 50%, 50%); */
+  }
+
+  25% {
+    /* --color-4: hsl(43, 50%, 50%); */
+    --color-1: hsl(120, 50%, 50%);
+    /* --color-2: hsl(200, 50%, 50%);
+    --color-3: hsl(250, 50%, 50%); */
+  }
+
+  50% {
+    /* --color-3: hsl(43, 50%, 50%); */
+    /* --color-4: hsl(120, 50%, 50%); */
+    --color-1: hsl(200, 50%, 50%);
+    /* --color-2: hsl(250, 50%, 50%); */
+  }
+
+  75% {
+    /* --color-2: hsl(43, 50%, 50%); */
+    /* --color-3: hsl(120, 50%, 50%); */
+    /* --color-4: hsl(200, 50%, 50%); */
+    --color-1: hsl(250, 50%, 50%);
+  }
+}
+
 body::before {
   content: "";
   position: absolute;
@@ -80,15 +117,17 @@ body::before {
 
   opacity: 0.5;
   /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-  background: rgb(79, 26, 165);
-  background: radial-gradient(
-    circle at 0 0,
-    rgb(43, 1, 116) 0%,
-    rgb(68, 8, 146) 20%,
-    rgba(39, 27, 208) 50%,
-    rgba(39, 183, 219) 70%
+  /* background: rgb(79, 26, 165); */
+  background: linear-gradient(
+    /* circle at top left, */
+    var(--color-1),
+    var(--color-2),
+    var(--color-3),
+    var(--color-4)
   );
-  /* animation: wallpaper 90s 1.5s ease infinite; */
+  /* animation: gradient 4s infinite; */
+  /* transition: --color-1 1000ms linear, --color-2 1000ms linear,
+    --color-3 1000ms linear, --color-4 1000ms linear; */
 }
 
 #___gatsby {
