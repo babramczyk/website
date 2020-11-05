@@ -57,7 +57,7 @@ export default function Layout({ children, location }) {
         </title>
         <meta
           name="description"
-          content="👋 I'm Brett Abramczyk. Come and learn more about me and what I do as a software engineer!"
+          content="I'm a full stack software engineer that enjoys building dependable and lovable products. Come learn more about me!"
         />
       </Helmet>
       <TitleBar filename={currentFilename} />
