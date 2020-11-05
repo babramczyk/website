@@ -18,6 +18,7 @@ const pathnamesToFilenames = {
   "/school/": "School.md",
   "/skills/": "Skills.md",
   "/toolkit/": "Toolkit.md",
+  "/no-estimates/": "NoEstimates.md",
 };
 
 export default function Layout({ children, location }) {

@@ -1,0 +1,43 @@
+import { PageHeader } from "../components/PageHeader";
+
+<PageHeader title="#NoEstimates">
+  <p>A brain dump on story pointing</p>
+</PageHeader>
+
+<br />
+
+I'm not a huge fan of estimating effort for tasks.
+
+The two main reasons typically cited for estimates are as follows:
+
+#### To see "when it will be done" 👨‍💼
+
+Get a velocity, use that velocity track when the feature or app will be done, please stakeholders. That's the general idea.
+
+The thing is, though, in order for you to project that far into the future, that means you'll be estimating tickets that won't be done for months. By that time, a million things are likely to have changed, and the estimate should be different. Or the story isn't applicable anymore.
+
+So, you're either estimating way too far into the future to the point of having next to no clue what effort something will take; _or_ you're constantly updating estimates for those stories, which is extremely wasteful at best and downright soul-sucking at worst 😅.
+
+#### To "figure out the team's velocity" 🏃‍♂️
+
+Yeah, I've actually heard this one before.
+
+> We should estimate so that we can look back on our estimates, see what was wrong with them, and that way we can get better at estimating.
+
+Which always just leaves me asking "...well sure, but why do we care about getting better at estimating again?"
+
+Neither of these reasons seem to provide much value to the team.
+
+### Alternatives
+
+An alternative that I loved when working at [AkitaBox](/akitabox/) was to try to size every ticket to be a "1". A "1" would roughly be the size of an [Ideal Developer Day](https://innolution.com/resources/glossary/ideal-day), where someone could feasibly pick up the ticket in one day and finish it.
+
+This kept the conversation on something that's actually useful -- prepping lean tickets. It constantly made us ask ourselves "how could we break this story down further?". In turn, that helped decrease the size of PRs, making them higher quality and easier to review.
+
+Plus, we'd still generally have a feel for how much we should aim for for a sprint (each agile time knew roughly how many tickets they completed per sprint). Since each ticket was roughly the same size, this served as a de facto velocity, but without the painful 2-hour sprint plannings.
+
+### To sum up
+
+I really dislike seeing waste on software teams. Squabbling over estimates is unfortunately a common example I've seen. I'd rather teams have meaningful conversations about _why_ they want to story point, and try to figure out alternatives that make efficient use of everyone's time and provide real value. Every team and project is different, and I think having honest conversations like this are crucial.
+
+So, that's about as best I can sum up my feelings. If you want the whole shpeel, [this talk](https://www.youtube.com/watch?v=QVBlnCTu9Ms&t=1288s) does an awesome job diving deeper, and generally represents my views on the topic.

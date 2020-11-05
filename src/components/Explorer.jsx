@@ -108,6 +108,11 @@ export const Explorer = ({ activeFile }) => {
           isActive={activeFile === "Books.md"}
         />
         <ExplorerFile
+          destRoute="/no-estimates/"
+          filename="NoEstimates.md"
+          isActive={activeFile === "NoEstimates.md"}
+        />
+        <ExplorerFile
           destRoute="/skills/"
           filename="Skills.md"
           isActive={activeFile === "Skills.md"}
