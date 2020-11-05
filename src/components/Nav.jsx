@@ -5,7 +5,7 @@ import LinkedInIcon from "../assets/icons/linked-in.svg";
 import GithubIcon from "../assets/icons/github.svg";
 import FileIcon from "../assets/icons/file.svg";
 import { mouseFocusSelector } from "../utils/mouseFocusSelector";
-import Resume from "../assets/brett-abramczyk.pdf";
+import Resume from "../assets/resume.pdf";
 
 const navItemStyles = {
   cursor: "pointer",
