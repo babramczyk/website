@@ -69,8 +69,8 @@ export const Explorer = ({ activeFile }) => {
           <ExplorerFile page={PAGES.SCHOOL} />
         </ExplorerDirectory>
 
-        <ExplorerFile page={PAGES.TEN_FACTOR} />
         <ExplorerFile page={PAGES.TOOLKIT} />
+        <ExplorerFile page={PAGES.TEN_FACTOR} />
         <ExplorerFile page={PAGES.BOOKS} />
         <ExplorerFile page={PAGES.NO_ESTIMATES} />
         <ExplorerFile page={PAGES.SKILLS} />
