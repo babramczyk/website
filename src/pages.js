@@ -4,6 +4,11 @@ export const PAGES = {
     filename: "README.md",
     iconSrc: "/icons/info.svg",
   },
+  NOT_FOUND: {
+    path: "/404",
+    filename: "404.md",
+    iconSrc: "/icons/markdown.svg",
+  },
   TEN_FACTOR: {
     path: "/10-factor/",
     filename: "10Factor.md",
