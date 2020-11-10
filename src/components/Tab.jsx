@@ -1,8 +1,14 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
+import { getPageByFilename } from "../pages";
 import { Icon } from "./Icon";
 
 export const Tab = ({ title }) => {
+  const { iconSrc, iconEmoji } = getPageByFilename(title);
+  if (!iconSrc && !iconEmoji) {
+    iconSrc = "/icons/markdown.svg";
+  }
+
   return (
     <div
       css={{
@@ -16,9 +22,7 @@ export const Tab = ({ title }) => {
         userSelect: "none",
       }}
     >
-      <Icon
-        src={title === "README.md" ? "/icons/info.svg" : "/icons/markdown.svg"}
-      />
+      <Icon src={iconSrc} emoji={iconEmoji} />
       <span>{title}</span>
     </div>
   );

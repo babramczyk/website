@@ -1,7 +1,24 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 
-export const Icon = ({ src, className }) => {
+export const Icon = ({ src, emoji, className }) => {
+  if (!src && !emoji) {
+    throw new Error("Icon: src or emoji prop required");
+  }
+
+  const img = src ? (
+    <img
+      css={{
+        objectFit: "cover",
+      }}
+      className={className}
+      src={require(`../assets${src}`)}
+      alt=""
+    />
+  ) : (
+    emoji
+  );
+
   return (
     <div
       css={{
@@ -13,14 +30,7 @@ export const Icon = ({ src, className }) => {
         justifyContent: "center",
       }}
     >
-      <img
-        css={{
-          objectFit: "cover",
-        }}
-        className={className}
-        src={require(`../assets${src}`)}
-        alt=""
-      />
+      {img}
     </div>
   );
 };

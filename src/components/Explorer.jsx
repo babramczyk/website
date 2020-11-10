@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { useSessionStorage } from "../hooks/useSessionStorage";
+import { PAGES } from "../pages";
 import { ExplorerDirectory } from "./ExplorerDirectory";
 import { ExplorerFile } from "./ExplorerFile";
 
 export const Explorer = ({ activeFile }) => {
-  const [openDirs, setOpenDirs] = useSessionStorage("openDirs", ["Timeline"]);
+  const [openDirs, setOpenDirs] = useSessionStorage("openDirs", []);
 
   return (
     <div
@@ -48,75 +49,31 @@ export const Explorer = ({ activeFile }) => {
           alignItems: "stretch",
         }}
       >
-        <ExplorerFile
-          destRoute="/"
-          filename="README.md"
-          isActive={activeFile === "README.md"}
-          iconSrc="/icons/info.svg"
-        />
+        <ExplorerFile page={PAGES.README} />
         <ExplorerDirectory
-          dirname="Timeline"
-          isOpen={isDirOpen("Timeline")}
+          dirname="Career"
+          isOpen={isDirOpen("Career")}
           onClick={(isOpen) => {
             if (isOpen) {
-              setOpenDirs((openDirs) => openDirs.concat(["Timeline"]));
+              setOpenDirs((openDirs) => openDirs.concat(["Career"]));
             } else {
               setOpenDirs((openDirs) =>
-                openDirs.filter((dir) => dir !== "Timeline")
+                openDirs.filter((dir) => dir !== "Career")
               );
             }
           }}
         >
-          <ExplorerFile
-            destRoute="/northwestern-mutual/"
-            filename="NorthwesternMutual.md"
-            isActive={activeFile === "NorthwesternMutual.md"}
-            iconSrc="/nm.png"
-          />
-          <ExplorerFile
-            destRoute="/akitabox/"
-            filename="AkitaBox.md"
-            isActive={activeFile === "AkitaBox.md"}
-            iconSrc="/akitabox.png"
-          />
-          <ExplorerFile
-            destRoute="/ancilla-partners/"
-            filename="AncillaPartners.md"
-            isActive={activeFile === "AncillaPartners.md"}
-            iconSrc="/ancilla-partners__inverted-transparent.png"
-          />
-          <ExplorerFile
-            destRoute="/school/"
-            filename="School.md"
-            isActive={activeFile === "School.md"}
-            iconSrc="/uw-madison.png"
-          />
+          <ExplorerFile page={PAGES.NM} />
+          <ExplorerFile page={PAGES.AKITABOX} />
+          <ExplorerFile page={PAGES.ANCILLA_PARTNERS} />
+          <ExplorerFile page={PAGES.SCHOOL} />
         </ExplorerDirectory>
-        <ExplorerFile
-          destRoute="/10-factor/"
-          filename="10Factor.md"
-          isActive={activeFile === "10Factor.md"}
-        />
-        <ExplorerFile
-          destRoute="/toolkit/"
-          filename="Toolkit.md"
-          isActive={activeFile === "Toolkit.md"}
-        />
-        <ExplorerFile
-          destRoute="/books/"
-          filename="Books.md"
-          isActive={activeFile === "Books.md"}
-        />
-        <ExplorerFile
-          destRoute="/no-estimates/"
-          filename="NoEstimates.md"
-          isActive={activeFile === "NoEstimates.md"}
-        />
-        <ExplorerFile
-          destRoute="/skills/"
-          filename="Skills.md"
-          isActive={activeFile === "Skills.md"}
-        />
+
+        <ExplorerFile page={PAGES.TEN_FACTOR} />
+        <ExplorerFile page={PAGES.TOOLKIT} />
+        <ExplorerFile page={PAGES.BOOKS} />
+        <ExplorerFile page={PAGES.NO_ESTIMATES} />
+        <ExplorerFile page={PAGES.SKILLS} />
       </ul>
     </div>
   );

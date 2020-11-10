@@ -7,22 +7,12 @@ import { Fragment, useEffect, useState } from "react";
 import { TitleBar } from "./TitleBar";
 import { useMediaQuery } from "@react-hook/media-query";
 import { Helmet } from "react-helmet";
-
-const pathnamesToFilenames = {
-  "/": "README.md",
-  "/10-factor/": "10Factor.md",
-  "/akitabox/": "AkitaBox.md",
-  "/ancilla-partners/": "AncillaPartners.md",
-  "/books/": "Books.md",
-  "/northwestern-mutual/": "NorthwesternMutual.md",
-  "/school/": "School.md",
-  "/skills/": "Skills.md",
-  "/toolkit/": "Toolkit.md",
-  "/no-estimates/": "NoEstimates.md",
-};
+import { getPageByPath } from "../pages";
 
 export default function Layout({ children, location }) {
-  const currentFilename = pathnamesToFilenames[location.pathname] || "404.md";
+  // TODO: Have eslint ran through babel so this error doesn't happen
+  const currentFilename =
+    getPageByPath(location.pathname)?.filename || "404.md";
 
   const isClient = typeof window !== "undefined";
 
