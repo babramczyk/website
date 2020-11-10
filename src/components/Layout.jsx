@@ -10,7 +10,6 @@ import { Helmet } from "react-helmet";
 import { getPageByPath } from "../pages";
 
 export default function Layout({ children, location }) {
-  // TODO: Have eslint ran through babel so this error doesn't happen
   const currentFilename =
     getPageByPath(location.pathname)?.filename || "404.md";
 
