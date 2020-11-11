@@ -6,6 +6,7 @@ const circleStyles = {
   width: "12px",
   height: "12px",
   margin: "0 4px",
+  cursor: "auto",
 };
 
 export function TitleBar({ filename }) {
@@ -30,7 +31,14 @@ export function TitleBar({ filename }) {
           paddingLeft: "2px",
         }}
       >
-        <span css={{ ...circleStyles, background: "#FC4848" }}></span>
+        <button
+          css={{ ...circleStyles, background: "#FC4848" }}
+          onClick={() => {
+            document.querySelector("body").innerHTML = "Are you happy?";
+            document.querySelector("body").style =
+              "display: flex; align-items: center; justify-content: center";
+          }}
+        ></button>
         <span css={{ ...circleStyles, background: "#FEB225" }}></span>
         <span css={{ ...circleStyles, background: "#2ACA33" }}></span>
       </div>
