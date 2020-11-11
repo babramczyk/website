@@ -34,9 +34,11 @@ export function TitleBar({ filename }) {
         <button
           css={{ ...circleStyles, background: "#FC4848" }}
           onClick={() => {
+            /* eslint-disable no-undef */
             document.querySelector("body").innerHTML = "Are you happy?";
             document.querySelector("body").style =
               "display: flex; align-items: center; justify-content: center";
+            /* eslint-enable no-undef */
           }}
         ></button>
         <span css={{ ...circleStyles, background: "#FEB225" }}></span>
