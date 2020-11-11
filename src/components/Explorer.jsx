@@ -73,6 +73,7 @@ export const Explorer = () => {
         <ExplorerFile page={PAGES.TEN_FACTOR} />
         <ExplorerFile page={PAGES.BOOKS} />
         <ExplorerFile page={PAGES.NO_ESTIMATES} />
+        <ExplorerFile page={PAGES.PORTFOLIO} />
         <ExplorerFile page={PAGES.SKILLS} />
       </ul>
     </div>

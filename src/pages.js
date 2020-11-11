@@ -54,6 +54,11 @@ export const PAGES = {
     filename: "#NoEstimates.md",
     iconEmoji: "🃏",
   },
+  PORTFOLIO: {
+    path: "/portfolio",
+    filename: "Portfolio.md",
+    iconEmoji: "✨",
+  },
 };
 
 /*******************************************************************
