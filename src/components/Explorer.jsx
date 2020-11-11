@@ -5,7 +5,7 @@ import { PAGES } from "../pages";
 import { ExplorerDirectory } from "./ExplorerDirectory";
 import { ExplorerFile } from "./ExplorerFile";
 
-export const Explorer = ({ activeFile }) => {
+export const Explorer = () => {
   const [openDirs, setOpenDirs] = useSessionStorage("openDirs", []);
 
   return (
