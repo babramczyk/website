@@ -59,6 +59,11 @@ export const PAGES = {
     filename: "Portfolio.md",
     iconEmoji: "✨",
   },
+  WEB_PAGE_FOCUS: {
+    path: "/web-page-focus/",
+    filename: "FocusingAWebPage.md",
+    iconEmoji: "⌨️",
+  },
 };
 
 /*******************************************************************

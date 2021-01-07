@@ -1,0 +1,61 @@
+import { PageHeader } from "../components/PageHeader";
+
+<PageHeader title="Focusing a Web Page with the Keyboard ⌨️" />
+
+How many times have been in your browser you reached for your mouse, scanned a web page for some blank spot, and click it -- just so you can return focus to the page in order to interact with it? You might want to scroll using the arrow keys, use the pages keyboard shortcuts, or interact with the page with something like [Vimium](https://github.com/philc/vimium)?
+
+I've done it a million times. It comes up in a lot of ways:
+
+- You might have been using the Chrome Debugger
+- You might have focused the Omnibar/location bar at the top of the browser
+- Or you might have focused any other part of the browser (like the bookmarks bar)
+
+Unfortunately, Chrome doesn't provide a keyboard shortcut for "focus the page", so we have to hack something together ourselves.
+
+## The Solution 🌻
+
+The main way we'll work around this is using JavaScript and "Search Engines" that Chrome lets us configure. Let's cut to the chase:
+
+1. Open Chrome preferences (`cmd/ctrl+,`)
+2. Scroll down and click `Manage Search Engines`
+3. Click `Add`, and configure your new "engine" like so:
+
+![Screen Shot 2021-01-07 at 8.00.00 AM](https://dev-to-uploads.s3.amazonaws.com/i/jdh4ud7vtr36cxrkh6x9.png)
+
+What we've done is added a simple way to run no-op JavaScript, which will in turn focus the page.
+
+Now, whenever you want to do so, you can focus the Omnibar (`cmd/ctrl+L`), type `j <enter>`, and voila! The browser's focus is back on the document, and you can interact with it again.
+
+## Adding More 📈
+
+We can make this JavaScript snippet a little smarter, and solve another problem in the process.
+
+Sometimes, pages have `<iframe>`s. When they do, you might interact with something in the frame. But then you have the same problem as before -- the root of the page no longer is interactive.
+
+To solve this, we can change the `URL` field in our Search Engine we just created to re-focus the window's main frame:
+
+```
+javascript:if (document.activeElement.tagName.toLowerCase() === "iframe") document.activeElement.blur()
+```
+
+What we've done is pretty simple -- if an `<iframe>` has focus, blur it. And then once again, our focus is on the main/"root" page.
+
+## Simplifying Further with Karabiner ⌨️
+
+If you're like me and on macOS, you're using [Karabiner](https://karabiner-elements.pqrs.org/) to add keyboard shortcuts at an OS level (you might even be using [Goku](https://github.com/yqrashawn/GokuRakuJoudo)!). Even if you're not, you might want to consider it, because it allows us to do awesome stuff like we're about to do 😄
+
+Because Karabiner lets us define keybindings based on the currently active application, we can define a macro that runs this workflow with just a simple keybinding! All we have to do is tell it:
+
+> When Google Chrome is the active application, and I press `ctrl+space`, type this: `⌘L j ↵`
+
+Here's what that looks like for [my karabiner config](https://github.com/babramczyk/dotfiles/blob/master/karabiner/karabiner.edn#L111), but it might look different for yours if you're not using Goku (its syntax can be pretty weird if you're looking at it for the first time, but [this tutorial](https://github.com/yqrashawn/GokuRakuJoudo/blob/master/tutorial.md) can help get you up to speed pretty quick).
+
+## Wrapping Up 🎁
+
+It's pretty awesome that I can just type `ctrl+enter` and focus the page again. It might seem trivial, but I think most of us have taken for granted just how many times we click the "dead area" of a web page just to focus it. Automating that process has been super useful for me.
+
+Try it out and let me know what you think 🙂
+
+<hr />
+
+> This post also appears on dev.to [here]() -- head over there to join the discussion!

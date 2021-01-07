@@ -67,14 +67,15 @@ export const Explorer = () => {
           <ExplorerFile page={PAGES.AKITABOX} />
           <ExplorerFile page={PAGES.ANCILLA_PARTNERS} />
           <ExplorerFile page={PAGES.SCHOOL} />
+          <ExplorerFile page={PAGES.SKILLS} />
         </ExplorerDirectory>
 
-        <ExplorerFile page={PAGES.TOOLKIT} />
+        <ExplorerFile page={PAGES.WEB_PAGE_FOCUS} />
         <ExplorerFile page={PAGES.TEN_FACTOR} />
+        <ExplorerFile page={PAGES.TOOLKIT} />
         <ExplorerFile page={PAGES.BOOKS} />
         <ExplorerFile page={PAGES.NO_ESTIMATES} />
         <ExplorerFile page={PAGES.PORTFOLIO} />
-        <ExplorerFile page={PAGES.SKILLS} />
       </ul>
     </div>
   );
